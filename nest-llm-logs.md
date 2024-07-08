@@ -323,3 +323,525 @@
 
 ---
 
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "How many sales in the dataset overall?",
+  "engineResponse": {
+    "query-id": "c9e9c014-bcf2-4fb7-ab6f-118f74ab3bc6",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.013444875,
+      "error-message": "Unknown column [sales_amount_local]"
+    }
+  },
+  "inboundQuery": "SELECT `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`",
+  "cleanedUpSql": "SELECT \"sales_amount_local\" FROM atscaleTable"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "How many sales in the first quarter of the 2023 year",
+  "engineResponse": {
+    "query-id": "b491f375-5a1e-40aa-8dda-37d092791e3e",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 1.340774334,
+      "error-message": "Numeric value 'Reporting Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2023 AND `Reporting Quarter` = 1",
+  "cleanedUpSql": "SELECT \"order_quantity_long\" FROM atscaleTable WHERE \"reporting_year\" = 2023 AND \"reporting_quarter\" = 1"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Quantify the total sales in the dataset",
+  "engineResponse": {
+    "query-id": "b669d6c0-4b3e-4a96-b192-68627f5d3af8",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.018116417000000003,
+      "error-message": "Unknown column [sales_amount_local]"
+    }
+  },
+  "inboundQuery": "SELECT SUM(`sales_amount_local`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`",
+  "cleanedUpSql": "SELECT SUM(\"sales_amount_local\") FROM atscaleTable"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Quantify the amount of sales in the dataset",
+  "engineResponse": {
+    "query-id": "ce66667e-681b-4f5b-bb28-bbc37d8dfdf1",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.029323583,
+      "error-message": "Unknown column [sales_amount_local]"
+    }
+  },
+  "inboundQuery": "SELECT `sales_amount_local`, `Internet Sales Amount Local`, `Reseller Sales Amount Local`, `Sales Amount-Order Retail445-30PrdMvAvg` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`",
+  "cleanedUpSql": "SELECT \"sales_amount_local\", \"internet_sales_amount_local\", \"reseller_sales_amount_local\", \"sales_amount_order_retail445_30prdmvavg\" FROM atscaleTable"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me the quantity of sales made in the first quarter of the year 2023 in the dataset",
+  "engineResponse": {
+    "query-id": "57bdbad1-930e-47db-8413-607be4c2d9d0",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.433020334,
+      "error-message": "Numeric value 'Reporting Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2023 AND `Reporting Quarter` = 1",
+  "cleanedUpSql": "SELECT \"order_quantity_long\" FROM atscaleTable WHERE \"reporting_year\" = 2023 AND \"reporting_quarter\" = 1"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me the quantity of sales made in the first quarter of the year 2024 in the dataset\n",
+  "engineResponse": {
+    "query-id": "6065f1f6-efcb-47a7-afe1-2ccb9d43412b",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.5679809170000001,
+      "error-message": "Numeric value 'Reporting Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2024 AND `Reporting Quarter` = 1",
+  "cleanedUpSql": "SELECT \"order_quantity_long\" FROM atscaleTable WHERE \"reporting_year\" = 2024 AND \"reporting_quarter\" = 1"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me the quantity of sales made in the first quarter of the year 1999 in the dataset\n",
+  "engineResponse": {
+    "query-id": "e749a66f-170b-4e78-b639-17a7e31d87b5",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.407918167,
+      "error-message": "Numeric value 'Reporting Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 1999 AND `Reporting Quarter` = 1",
+  "cleanedUpSql": "SELECT \"order_quantity_long\" FROM atscaleTable WHERE \"reporting_year\" = 1999 AND \"reporting_quarter\" = 1"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "What is the total of sales made as a float in scientific notation in the whole dataset",
+  "engineResponse": {
+    "query-id": "c641b573-c437-4081-a7a2-40aea281eba5",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.085097875,
+      "error-message": "Don't understand function: to_char"
+    }
+  },
+  "inboundQuery": "SELECT to_char(sum(`Sales Amount-Order Retail445-30PrdMvAvg`), '9.99EEEE') FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`",
+  "cleanedUpSql": "SELECT to_char(sum(\"sales_amount_order_retail445_30prdmvavg\"), '9.99EEEE') FROM atscaleTable"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "What is the highest earning month",
+  "engineResponse": {
+    "query-id": "e73ea2e2-0621-4724-b435-de09e8774857",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.007883459,
+      "error-message": "Unknown column [sales_amount_local]"
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Month`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC LIMIT 1",
+  "cleanedUpSql": "SELECT \"reporting_month\", \"sales_amount_local\" FROM atscaleTable ORDER BY \"sales_amount_local\" DESC LIMIT 1;"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "What is the quantity of units sold in the dataset\n\nWith the year 2023 in it",
+  "engineResponse": {
+    "query-id": "7016cc65-7a38-497b-80ab-22a976b37474",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.505086001,
+      "error-message": "Numeric value 'Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Year` = 2023",
+  "cleanedUpSql": "SELECT \"order_quantity_long\" FROM atscaleTable WHERE \"year\" = 2023"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "How many sales in 2006",
+  "engineResponse": {
+    "query-id": "09ba9a68-dc38-44e3-b12d-43033d58d5a3",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 1.2185441670000001,
+      "error-message": "Numeric value 'Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Order Number`, `Ship.Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Ship.Year` = 2006",
+  "cleanedUpSql": "SELECT \"order_number\", \"ship_year\" FROM atscaleTable WHERE \"ship_year\" = 2006"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "how many sales in months that end in ber",
+  "engineResponse": {
+    "query-id": "bb413cf0-6f34-4feb-ac16-75565e3231bf",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.014937667000000002,
+      "error-message": "Don't understand aggregate function: aggregateName: COUNT(*)\noperator: null\nmethodName: null\ntype: null\n"
+    }
+  },
+  "inboundQuery": "SELECT `Ship.Month`, COUNT(*) \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` \nWHERE `Ship.Month` LIKE '%ber'",
+  "cleanedUpSql": "SELECT \"ship_month\", COUNT(*) \nFROM atscaleTable \nWHERE \"ship_month\" LIKE '%ber';"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "What were the best sale months",
+  "engineResponse": {
+    "query-id": "4a724702-5e6a-4078-bea1-582581861bb6",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.01026425,
+      "error-message": "Unknown column [sales_amount_local]"
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Month`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC",
+  "cleanedUpSql": "SELECT \"reporting_month\", \"sales_amount_local\" FROM atscaleTable ORDER BY \"sales_amount_local\" DESC;"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me a summary expansion of Reporting June, 2005",
+  "engineResponse": {
+    "query-id": "aaff7d93-8e19-438a-86a2-20d79650b792",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.5686480420000001,
+      "error-message": "Numeric value 'Reporting Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Year`, `Reporting Month`, `Reporting Quarter`, `Reporting Half Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2005 AND `Reporting Month` = 6",
+  "cleanedUpSql": "SELECT \"reporting_year\", \"reporting_month\", \"reporting_quarter\", \"reporting_half_year\" FROM atscaleTable WHERE \"reporting_year\" = 2005 AND \"reporting_month\" = 6"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me the details of \"Reporting June, 2005\"",
+  "engineResponse": {
+    "query-id": "3465512f-cfd4-4fa8-9212-3f3e87c0ff25",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 1.434731833,
+      "error-message": "Numeric value 'Reporting Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Year`, `Reporting Month`, `Reporting Quarter`, `Reporting Half Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2005 AND `Reporting Month` = 6",
+  "cleanedUpSql": "SELECT \"reporting_year\", \"reporting_month\", \"reporting_quarter\", \"reporting_half_year\" FROM atscaleTable WHERE \"reporting_year\" = 2005 AND \"reporting_month\" = 6"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me the details of Reporting June, 2005",
+  "engineResponse": {
+    "query-id": "5af85c3d-c82b-40cf-804c-59282829d8f6",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.576629917,
+      "error-message": "Numeric value 'Reporting Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Year`, `Reporting Month`, `Reporting Quarter`, `Reporting Half Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2005 AND `Reporting Month` = 6",
+  "cleanedUpSql": "SELECT \"reporting_year\", \"reporting_month\", \"reporting_quarter\", \"reporting_half_year\" FROM atscaleTable WHERE \"reporting_year\" = 2005 AND \"reporting_month\" = 6"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "What was the best month with the year 2005 attached",
+  "engineResponse": {
+    "query-id": "b60de12a-16c8-4bae-875a-19364064e957",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.527697375,
+      "error-message": "Numeric value 'Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Month`, `Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Year` = 2005 ORDER BY `Month` DESC LIMIT 1",
+  "cleanedUpSql": "SELECT \"month\", \"year\" FROM atscaleTable WHERE \"year\" = 2005 ORDER BY \"month\" DESC LIMIT 1;"
+}
+
+---
+
+{
+  "modelName": "ASAdventureSmall",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Most sales in 2005",
+  "engineResponse": {
+    "query-id": "63d659a2-d02f-41c1-ab81-f86256797f97",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.605709417,
+      "error-message": "Numeric value 'ISO8601 Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Sales Amount-Order Retail445-30PrdMvAvg`, `Ship.ISO 8601 Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Ship.ISO 8601 Year` = 2005 ORDER BY `Sales Amount-Order Retail445-30PrdMvAvg` DESC LIMIT 1",
+  "cleanedUpSql": "SELECT \"sales_amount_order_retail445_30prdmvavg\", \"ship_iso_8601_year\" FROM atscaleTable WHERE \"ship_iso_8601_year\" = 2005 ORDER BY \"sales_amount_order_retail445_30prdmvavg\" DESC LIMIT 1;"
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "What was the best month with the year 2005 attached\n",
+  "engineResponse": {
+    "query-id": "604a32ca-350d-493c-9d4b-19ab20808fa9",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.614332584,
+      "error-message": "Numeric value 'Reporting Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Month`, `Reporting Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `Reporting Year` = 2005 ORDER BY `Reporting Month` DESC LIMIT 1",
+  "cleanedUpSql": "SELECT \"reporting_month\", \"reporting_year\" FROM atscaleTable WHERE \"reporting_year\" = 2005 ORDER BY \"reporting_month\" DESC LIMIT 1;"
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me one month from \"ISO8601 Calendar 2007\" that has the highest reporting units",
+  "engineResponse": {
+    "query-id": "7631d1e2-ecd7-4828-82be-cd91824bba10",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.025200584,
+      "error-message": "Don't understand aggregate function: aggregateName: COUNT(*)\noperator: null\nmethodName: null\ntype: null\n"
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Month`, COUNT(*) AS reporting_units \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nWHERE `ISO 8601 Year` = 2007 \nGROUP BY `Reporting Month` \nORDER BY reporting_units DESC \nLIMIT 1",
+  "cleanedUpSql": "SELECT \"reporting_month\", COUNT(*) AS reporting_units \nFROM atscaleTable \nWHERE \"iso_8601_year\" = 2007 \nGROUP BY \"reporting_month\" \nORDER BY reporting_units DESC \nLIMIT 1;"
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Now give me the opposite of the previous instruction",
+  "engineResponse": {
+    "query-id": "2dc1504b-f014-4b50-a2d1-29c9ea8082d3",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.016330625,
+      "error-message": "Encountered \" <IDENTIFIER> \"I \"\" at line 1, column 1.\nWas expecting one of:\n    \"alter\" ...\n    \"begin\" ...\n    \"close\" ...\n    \"commit\" ...\n    \"create\" ...\n    \"deallocate\" ...\n    \"declare\" ...\n    \"delete\" ...\n    \"drop\" ...\n    \"execute\" ...\n    \"fetch\" ...\n    \"insert\" ...\n    \"prepare\" ...\n    \"rollback\" ...\n    \"select\" ...\n    \"update\" ...\n    \"values\" ...\n    \"truncate\" ...\n    \"call\" ...\n    \"explain\" ...\n    \"copy\" ...\n    \"lock\" ...\n    \"rename\" ...\n    \"show\" ...\n    \"{\" ...\n    \"(\" ...\n    \"?\" ...\n    <DOLLAR_N> ...\n    "
+    }
+  },
+  "inboundQuery": "I'll respond with the natural language query corresponding to the PostgreSQL query you provide.",
+  "cleanedUpSql": "I'll respond with the natural language query corresponding to the PostgreSQL query you provide."
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\nGive me the ratio of the previous two instructions\n",
+  "engineResponse": {
+    "query-id": "27b7380a-ea52-4046-96cd-327b37df2738",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.009111166,
+      "error-message": "Encountered \" <IDENTIFIER> \"Here \"\" at line 1, column 1.\nWas expecting one of:\n    \"alter\" ...\n    \"begin\" ...\n    \"close\" ...\n    \"commit\" ...\n    \"create\" ...\n    \"deallocate\" ...\n    \"declare\" ...\n    \"delete\" ...\n    \"drop\" ...\n    \"execute\" ...\n    \"fetch\" ...\n    \"insert\" ...\n    \"prepare\" ...\n    \"rollback\" ...\n    \"select\" ...\n    \"update\" ...\n    \"values\" ...\n    \"truncate\" ...\n    \"call\" ...\n    \"explain\" ...\n    \"copy\" ...\n    \"lock\" ...\n    \"rename\" ...\n    \"show\" ...\n    \"{\" ...\n    \"(\" ...\n    \"?\" ...\n    <DOLLAR_N> ...\n    "
+    }
+  },
+  "inboundQuery": "Here are the PostgreSQL queries to answer the questions:\n\n**Best reporting `Month` with least number of sales and greatest number of units:**\nSELECT `Reporting Month`, MIN(`Sales Amount-Order Retail445-30PrdMvAvg`) AS min_sales, MAX(`Reseller Order Quantity Long`) AS max_units\nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\nGROUP BY `Reporting Month`\nORDER BY min_sales, max_units DESC\nLIMIT 1\n\n**Best reporting `Month` with greatest number of sales and least number of units:**\nSELECT `Reporting Month`, MAX(`Sales Amount-Order Retail445-30PrdMvAvg`) AS max_sales, MIN(`Reseller Order Quantity Long`) AS min_units\nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\nGROUP BY `Reporting Month`\nORDER BY max_sales DESC, min_units\nLIMIT 1\n\n**Ratio of the previous two instructions:**\nWITH \n  best_month_least_sales AS (\n    SELECT `Reporting Month`, MIN(`Sales Amount-Order Retail445-30PrdMvAvg`) AS min_sales, MAX(`Reseller Order Quantity Long`) AS max_units\n    FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\n    GROUP BY `Reporting Month`\n    ORDER BY min_sales, max_units DESC\n    LIMIT 1\n  ),\n  best_month_greatest_sales AS (\n    SELECT `Reporting Month`, MAX(`Sales Amount-Order Retail445-30PrdMvAvg`) AS max_sales, MIN(`Reseller Order Quantity Long`) AS min_units\n    FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\n    GROUP BY `Reporting Month`\n    ORDER BY max_sales DESC, min_units\n    LIMIT 1\n  )\nSELECT \n  (best_month_greatest_sales.max_sales / best_month_least_sales.min_sales) AS sales_ratio,\n  (best_month_least_sales.max_units / best_month_greatest_sales.min_units) AS units_ratio\nFROM \n  best_month_least_sales, best_month_greatest_sales\nNote: The ratio query assumes that the `Reporting Month` values are the same for both best months. If not, the query needs to be adjusted accordingly.",
+  "cleanedUpSql": "Here are the PostgreSQL queries to answer the questions:\n\n**Best reporting month with least number of sales and greatest number of units:**\nSELECT \"reporting_month\", MIN(\"sales_amount_order_retail445_30prdmvavg\") AS min_sales, MAX(\"reseller_order_quantity_long\") AS max_units\nFROM atscaleTable\nGROUP BY \"reporting_month\"\nORDER BY min_sales, max_units DESC\nLIMIT 1;\n\n**Best reporting month with greatest number of sales and least number of units:**\nSELECT \"reporting_month\", MAX(\"sales_amount_order_retail445_30prdmvavg\") AS max_sales, MIN(\"reseller_order_quantity_long\") AS min_units\nFROM atscaleTable\nGROUP BY \"reporting_month\"\nORDER BY max_sales DESC, min_units\nLIMIT 1;\n\n**Ratio of the previous two instructions:**\nWITH \n  best_month_least_sales AS (\n    SELECT \"reporting_month\", MIN(\"sales_amount_order_retail445_30prdmvavg\") AS min_sales, MAX(\"reseller_order_quantity_long\") AS max_units\n    FROM atscaleTable\n    GROUP BY \"reporting_month\"\n    ORDER BY min_sales, max_units DESC\n    LIMIT 1\n  ),\n  best_month_greatest_sales AS (\n    SELECT \"reporting_month\", MAX(\"sales_amount_order_retail445_30prdmvavg\") AS max_sales, MIN(\"reseller_order_quantity_long\") AS min_units\n    FROM atscaleTable\n    GROUP BY \"reporting_month\"\n    ORDER BY max_sales DESC, min_units\n    LIMIT 1\n  )\nSELECT \n  (best_month_greatest_sales.max_sales / best_month_least_sales.min_sales) AS sales_ratio,\n  (best_month_least_sales.max_units / best_month_greatest_sales.min_units) AS units_ratio\nFROM \n  best_month_least_sales, best_month_greatest_sales;\nNote: The ratio query assumes that the `reporting_month` values are the same for both best months. If not, the query needs to be adjusted accordingly."
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "compare the quantities gathered from the following two questions:\n\nGive me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\nGive me the ratio of the previous two instructions\n",
+  "engineResponse": {
+    "query-id": "73a4388a-f611-4e50-b37d-c9b0d8b9f3c5",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.005294667,
+      "error-message": "Encountered \" \"select\" \"SELECT \"\" at line 12, column 1.\nWas expecting one of:\n    <EOF> \n    \"fetch\" ...\n    \"for\" ...\n    \"offset\" ...\n    \"limit\" ...\n    "
+    }
+  },
+  "inboundQuery": "SELECT \n  `Reporting Month`, \n  `Sales Amount-Order Retail445-30PrdMvAvg`, \n  `Reseller Order Quantity Long`\nFROM \n  `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\nORDER BY \n  `Sales Amount-Order Retail445-30PrdMvAvg` ASC, \n  `Reseller Order Quantity Long` DESC\nLIMIT 1\n\nSELECT \n  `Reporting Month`, \n  `Sales Amount-Order Retail445-30PrdMvAvg`, \n  `Reseller Order Quantity Long`\nFROM \n  `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\nORDER BY \n  `Sales Amount-Order Retail445-30PrdMvAvg` DESC, \n  `Reseller Order Quantity Long` ASC\nLIMIT 1\n\nSELECT \n  ((\n    SELECT \n      `Sales Amount-Order Retail445-30PrdMvAvg` \n    FROM \n      `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \n    ORDER BY \n      `Sales Amount-Order Retail445-30PrdMvAvg` DESC, \n      `Reseller Order Quantity Long` ASC \n    LIMIT 1\n  ) / (\n    SELECT \n      `Sales Amount-Order Retail445-30PrdMvAvg` \n    FROM \n      `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \n    ORDER BY \n      `Sales Amount-Order Retail445-30PrdMvAvg` ASC, \n      `Reseller Order Quantity Long` DESC \n    LIMIT 1\n  )) AS ratio",
+  "cleanedUpSql": "SELECT \n  \"reporting_month\", \n  \"sales_amount_order_retail445_30prdmvavg\", \n  \"reseller_order_quantity_long\"\nFROM \n  atscaleTable\nORDER BY \n  \"sales_amount_order_retail445_30prdmvavg\" ASC, \n  \"reseller_order_quantity_long\" DESC\nLIMIT 1;\n\nSELECT \n  \"reporting_month\", \n  \"sales_amount_order_retail445_30prdmvavg\", \n  \"reseller_order_quantity_long\"\nFROM \n  atscaleTable\nORDER BY \n  \"sales_amount_order_retail445_30prdmvavg\" DESC, \n  \"reseller_order_quantity_long\" ASC\nLIMIT 1;\n\nSELECT \n  ((\n    SELECT \n      \"sales_amount_order_retail445_30prdmvavg\" \n    FROM \n      atscaleTable \n    ORDER BY \n      \"sales_amount_order_retail445_30prdmvavg\" DESC, \n      \"reseller_order_quantity_long\" ASC \n    LIMIT 1\n  ) / (\n    SELECT \n      \"sales_amount_order_retail445_30prdmvavg\" \n    FROM \n      atscaleTable \n    ORDER BY \n      \"sales_amount_order_retail445_30prdmvavg\" ASC, \n      \"reseller_order_quantity_long\" DESC \n    LIMIT 1\n  )) AS ratio;"
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "compare the quantities gathered from the following two questions:\n\nGive me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\n",
+  "engineResponse": {
+    "query-id": "4e4985c6-269b-4b2e-b81c-1223fe6fc0d5",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.013545458000000002,
+      "error-message": "Encountered \" \"select\" \"SELECT \"\" at line 5, column 1.\nWas expecting one of:\n    <EOF> \n    \"collate\" ...\n    \"except\" ...\n    \"fetch\" ...\n    \"for\" ...\n    \"having\" ...\n    \"intersect\" ...\n    \"order\" ...\n    \"union\" ...\n    \"window\" ...\n    \"with\" ...\n    \"offset\" ...\n    \"limit\" ...\n    \",\" ...\n    "
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Month`, MIN(`Sales Amount-Order Retail445-30PrdMvAvg`), MAX(`Reseller Order Quantity Long`) \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nGROUP BY `Reporting Month`\n\nSELECT `Reporting Month`, MAX(`Sales Amount-Order Retail445-30PrdMvAvg`), MIN(`Reseller Order Quantity Long`) \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nGROUP BY `Reporting Month`",
+  "cleanedUpSql": "SELECT \"reporting_month\", MIN(\"sales_amount_order_retail445_30prdmvavg\"), MAX(\"reseller_order_quantity_long\") \nFROM atscaleTable \nGROUP BY \"reporting_month\"\n\nSELECT \"reporting_month\", MAX(\"sales_amount_order_retail445_30prdmvavg\"), MIN(\"reseller_order_quantity_long\") \nFROM atscaleTable \nGROUP BY \"reporting_month\""
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Give me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\n",
+  "engineResponse": {
+    "query-id": "bdb88705-29a6-4b47-af49-4c26c806341d",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.0303215,
+      "error-message": "Encountered \" \"select\" \"SELECT \"\" at line 6, column 1.\nWas expecting one of:\n    <EOF> \n    \"asc\" ...\n    \"collate\" ...\n    \"desc\" ...\n    \"fetch\" ...\n    \"for\" ...\n    \"offset\" ...\n    \"limit\" ...\n    \",\" ...\n    "
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Month`, SUM(`Reseller Sales Amount Local`) AS sales_amount, SUM(`Reseller Order Quantity Long`) AS units \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nGROUP BY `Reporting Month` \nORDER BY sales_amount, units\n\nSELECT `Reporting Month`, SUM(`Reseller Sales Amount Local`) AS sales_amount, SUM(`Reseller Order Quantity Long`) AS units \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nGROUP BY `Reporting Month` \nORDER BY sales_amount DESC, units",
+  "cleanedUpSql": "SELECT \"reporting_month\", SUM(\"reseller_sales_amount_local\") AS sales_amount, SUM(\"reseller_order_quantity_long\") AS units \nFROM atscaleTable \nGROUP BY \"reporting_month\" \nORDER BY sales_amount, units;\n\nSELECT \"reporting_month\", SUM(\"reseller_sales_amount_local\") AS sales_amount, SUM(\"reseller_order_quantity_long\") AS units \nFROM atscaleTable \nGROUP BY \"reporting_month\" \nORDER BY sales_amount DESC, units;"
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "How often did we sell more than 25000 units?",
+  "engineResponse": {
+    "query-id": "01ba1d4d-b072-4bcf-b8ed-15e2ce22fdc1",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 1.158619834,
+      "error-message": "SQL compilation error:\nsyntax error line 2 at position 0 unexpected 'FROM'."
+    }
+  },
+  "inboundQuery": "SELECT * FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `Reseller Order Quantity Long` > 25000",
+  "cleanedUpSql": "SELECT * FROM atscaleTable WHERE \"reseller_order_quantity_long\" > 25000;"
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "Which months sold more than 25000 units?",
+  "engineResponse": {
+    "query-id": "102fc4db-5c54-4993-8b73-dcf2df756f75",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.021793501,
+      "error-message": "Unknown conditional of class [class com.foundationdb.sql.parser.SubqueryNode] and value: [subqueryType: IN\ntype: null\n]"
+    }
+  },
+  "inboundQuery": "SELECT `Reporting Month`, `Month` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `Month` IN (SELECT `Month` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` GROUP BY `Month` HAVING COUNT(*) > 25000)",
+  "cleanedUpSql": "SELECT \"reporting_month\", \"month\" FROM atscaleTable WHERE \"month\" IN (SELECT \"month\" FROM atscaleTable GROUP BY \"month\" HAVING COUNT(*) > 25000);"
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "How many sales this year",
+  "engineResponse": {
+    "query-id": "a2498657-4e35-44ec-967c-efd42e7afbd1",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 0.548986333,
+      "error-message": "Numeric value 'ISO8601 Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT `Sales Amount-Order Retail445-30PrdMvAvg` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `ISO 8601 Year` = EXTRACT(YEAR FROM CURRENT_DATE)",
+  "cleanedUpSql": "SELECT \"sales_amount_order_retail445_30prdmvavg\" FROM atscaleTable WHERE \"iso_8601_year\" = EXTRACT(YEAR FROM CURRENT_DATE);"
+}
+
+---
+
+{
+  "modelName": "ResellerPerspective",
+  "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+  "userQuestion": "How many sales this year, i.e. the total value within \"ISO8601 Calendar 2000\n\"\n",
+  "engineResponse": {
+    "query-id": "04d7fa46-7a71-4bc8-a1d5-1cf0b2cbbc8d",
+    "metadata": {
+      "succeeded": false,
+      "wall-time": 4.284145252,
+      "error-message": "Numeric value 'ISO8601 Calendar 2000' is not recognized"
+    }
+  },
+  "inboundQuery": "SELECT SUM(`Sales Amount-Order Retail445-30PrdMvAvg`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `ISO 8601 Year` = EXTRACT(YEAR FROM CURRENT_DATE)",
+  "cleanedUpSql": "SELECT SUM(\"sales_amount_order_retail445_30prdmvavg\") FROM atscaleTable WHERE \"iso_8601_year\" = EXTRACT(YEAR FROM CURRENT_DATE);"
+}
+
+---
+
