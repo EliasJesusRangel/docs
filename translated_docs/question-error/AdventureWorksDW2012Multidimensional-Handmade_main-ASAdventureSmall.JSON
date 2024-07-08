@@ -1,0 +1,10 @@
+{
+  "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n": [
+    {
+      "userQuestion": "How many sales happened last year in the first quarter?\n"
+    },
+    {
+      "userQuestion": "How many sales happened last year in the second quarter?\n"
+    }
+  ]
+}

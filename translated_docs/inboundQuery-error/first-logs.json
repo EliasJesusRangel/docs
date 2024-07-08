@@ -1,0 +1,179 @@
+{
+  "Numeric value 'Calendar 2000' is not recognized": [
+    {
+      "inboundQuery": "SELECT `salesamount1` FROM `Sales Insights - BigQuery_main`.`Internet Sales - No PII` WHERE `Order YearWeek` = EXTRACT(YEAR FROM CURRENT_DATE)"
+    },
+    {
+      "inboundQuery": "SELECT `salesamount1` FROM `Sales Insights - BigQuery_main`.`Internet Sales - No PII` WHERE `Order YearWeek` = EXTRACT(YEAR FROM CURRENT_DATE)"
+    },
+    {
+      "inboundQuery": "SELECT `salesamount1` FROM `Sales Insights - BigQuery_main`.`Internet Sales` WHERE `Order YearWeek` = EXTRACT(YEAR FROM CURRENT_DATE)"
+    },
+    {
+      "inboundQuery": "SELECT `salesamount1` FROM `sml-models_jeff_llm_testing`.`Internet Sales` WHERE `Order YearWeek` = EXTRACT(YEAR FROM CURRENT_DATE)"
+    },
+    {
+      "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Year` = 2023"
+    },
+    {
+      "inboundQuery": "SELECT `Order Number`, `Ship.Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Ship.Year` = 2006"
+    },
+    {
+      "inboundQuery": "SELECT `Month`, `Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Year` = 2005 ORDER BY `Month` DESC LIMIT 1"
+    }
+  ],
+  "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n": [
+    {
+      "inboundQuery": "SELECT `orderquantity1`, `Order YearWeek` FROM `Sales Insights - BigQuery_main`.`Internet Sales - No PII` WHERE `Order YearWeek` = (SELECT MAX(`Order YearWeek`) FROM `Sales Insights - BigQuery_main`.`Internet Sales - No PII`) AND `Order YearWeek` - 1 = (SELECT MAX(`Order YearWeek`) - 1 FROM `Sales Insights - BigQuery_main`.`Internet Sales - No PII`)"
+    },
+    {
+      "inboundQuery": "SELECT `sale_calendar_year`, `m_Sale_Quantity_sum` FROM `sml-models_jeff_llm_testing`.`World Wide Importers` WHERE `sale_calendar_year` = (SELECT EXTRACT(YEAR FROM CURRENT_DATE) - 1)"
+    },
+    {
+      "inboundQuery": "SELECT `m_Sale_Quantity_sum`, `Sale Stock Item` \nFROM `sml-models_jeff_llm_testing`.`World Wide Importers` \nWHERE `sale_calendar_year` = 2023 \nAND `sale_calendar_month` IN (1, 2) \nAND `m_Sale_Quantity_sum` > (SELECT AVG(`m_Sale_Quantity_sum`) FROM `sml-models_jeff_llm_testing`.`World Wide Importers`)"
+    },
+    {
+      "inboundQuery": "SELECT `Movement Calendar Year - WW`, `m_Quantity_sum` FROM `sml-models_jeff_llm_testing`.`World Wide Importers` WHERE `Movement Calendar Year - WW` = (SELECT MAX(`Movement Calendar Year - WW`) - 1 FROM `sml-models_jeff_llm_testing`.`World Wide Importers`) ORDER BY `m_Quantity_sum` DESC LIMIT 1"
+    },
+    {
+      "inboundQuery": "SELECT `orderquantity1`, `Order Quarter` FROM `Sales Insights - BigQuery_main`.`Internet Sales` WHERE `Order Quarter` < 34 AND `Order YearWeek` = (SELECT MAX(`Order YearWeek`) FROM `Sales Insights - BigQuery_main`.`Internet Sales`) - 1"
+    },
+    {
+      "inboundQuery": "SELECT `orderquantity1`, `Order Quarter`, `Order YearWeek` FROM `Sales Insights - BigQuery_main`.`Internet Sales` WHERE `Order YearWeek` = (SELECT MAX(`Order YearWeek`) FROM `Sales Insights - BigQuery_main`.`Internet Sales`) - 1 AND `Order Quarter` < 3"
+    },
+    {
+      "inboundQuery": "SELECT `Sold Calendar Year`, `store_sales` FROM `sml-models_jeff_llm_testing`.`TPC-DS Benchmark Model` WHERE `Sold Calendar Year` = (SELECT EXTRACT(YEAR FROM CURRENT_DATE) - 1)"
+    }
+  ],
+  "SQL compilation error: error line 9 at position 6\ninvalid identifier '\"datecustom_t20\".\"reporting_year_name\"'": [
+    {
+      "inboundQuery": "SELECT `salesamount1` FROM `Sales Insights - BigQuery_main`.`Internet Sales` WHERE `Order ReportIng_Year` = EXTRACT(YEAR FROM CURRENT_DATE)"
+    },
+    {
+      "inboundQuery": "SELECT `salesamount1` FROM `Sales Insights - BigQuery_main`.`Internet Sales` WHERE `Order ReportIng_Year` = (EXTRACT(YEAR FROM CURRENT_DATE) - 1)"
+    }
+  ],
+  "Unknown column [sale_calendar_year]": [
+    {
+      "inboundQuery": "SELECT `m_Sale_Quantity_sum` FROM `sml-models_jeff_llm_testing`.`World Wide Importers` WHERE `sale_calendar_year` = (SELECT EXTRACT(YEAR FROM CURRENT_DATE) - 1)"
+    },
+    {
+      "inboundQuery": "SELECT `sale_calendar_year`, `sale_calendar_month`, `Sale Stock Item`, `m_Sale_Quantity_sum` \nFROM `sml-models_jeff_llm_testing`.`World Wide Importers` \nORDER BY `m_Sale_Quantity_sum` DESC LIMIT 1"
+    }
+  ],
+  "Unknown column [order_custom_year]": [
+    {
+      "inboundQuery": "SELECT `order_custom_year`, `order_custom_quarter`, `order_custom_month`, `order_custom_week`, `Order Day_Date` \nFROM `Sales Insights - BigQuery_main`.`Internet Sales` \nWHERE `orderquantity1` > 1000000 \nORDER BY `Order Day_Date` DESC \nLIMIT 1"
+    }
+  ],
+  "Unknown column [order_custom_quarter]": [
+    {
+      "inboundQuery": "SELECT `orderquantity1` \nFROM `Sales Insights - BigQuery_main`.`Internet Sales` \nWHERE `order_custom_quarter` = 1"
+    }
+  ],
+  "Numeric value 'Reporting Calendar 2000' is not recognized": [
+    {
+      "inboundQuery": "SELECT `salesamount1` FROM `sml-models_jeff_llm_testing`.`Internet Sales` WHERE `Order ReportIng_Year` = (EXTRACT(YEAR FROM CURRENT_DATE) - 1)"
+    },
+    {
+      "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2023 AND `Reporting Quarter` = 1"
+    },
+    {
+      "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2023 AND `Reporting Quarter` = 1"
+    },
+    {
+      "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2024 AND `Reporting Quarter` = 1"
+    },
+    {
+      "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 1999 AND `Reporting Quarter` = 1"
+    },
+    {
+      "inboundQuery": "SELECT `Reporting Year`, `Reporting Month`, `Reporting Quarter`, `Reporting Half Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2005 AND `Reporting Month` = 6"
+    },
+    {
+      "inboundQuery": "SELECT `Reporting Year`, `Reporting Month`, `Reporting Quarter`, `Reporting Half Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2005 AND `Reporting Month` = 6"
+    },
+    {
+      "inboundQuery": "SELECT `Reporting Year`, `Reporting Month`, `Reporting Quarter`, `Reporting Half Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = 2005 AND `Reporting Month` = 6"
+    },
+    {
+      "inboundQuery": "SELECT `Reporting Month`, `Reporting Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `Reporting Year` = 2005 ORDER BY `Reporting Month` DESC LIMIT 1"
+    }
+  ],
+  "Unknown column [sales_amount_local]": [
+    {
+      "inboundQuery": "SELECT `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`"
+    },
+    {
+      "inboundQuery": "SELECT SUM(`sales_amount_local`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`"
+    },
+    {
+      "inboundQuery": "SELECT `sales_amount_local`, `Internet Sales Amount Local`, `Reseller Sales Amount Local`, `Sales Amount-Order Retail445-30PrdMvAvg` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`"
+    },
+    {
+      "inboundQuery": "SELECT `Reporting Month`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC LIMIT 1"
+    },
+    {
+      "inboundQuery": "SELECT `Reporting Month`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC"
+    }
+  ],
+  "Don't understand function: to_char": [
+    {
+      "inboundQuery": "SELECT to_char(sum(`Sales Amount-Order Retail445-30PrdMvAvg`), '9.99EEEE') FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`"
+    }
+  ],
+  "Don't understand aggregate function: aggregateName: COUNT(*)\noperator: null\nmethodName: null\ntype: null\n": [
+    {
+      "inboundQuery": "SELECT `Ship.Month`, COUNT(*) \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` \nWHERE `Ship.Month` LIKE '%ber'"
+    },
+    {
+      "inboundQuery": "SELECT `Reporting Month`, COUNT(*) AS reporting_units \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nWHERE `ISO 8601 Year` = 2007 \nGROUP BY `Reporting Month` \nORDER BY reporting_units DESC \nLIMIT 1"
+    }
+  ],
+  "Numeric value 'ISO8601 Calendar 2000' is not recognized": [
+    {
+      "inboundQuery": "SELECT `Sales Amount-Order Retail445-30PrdMvAvg`, `Ship.ISO 8601 Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Ship.ISO 8601 Year` = 2005 ORDER BY `Sales Amount-Order Retail445-30PrdMvAvg` DESC LIMIT 1"
+    },
+    {
+      "inboundQuery": "SELECT `Sales Amount-Order Retail445-30PrdMvAvg` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `ISO 8601 Year` = EXTRACT(YEAR FROM CURRENT_DATE)"
+    },
+    {
+      "inboundQuery": "SELECT SUM(`Sales Amount-Order Retail445-30PrdMvAvg`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `ISO 8601 Year` = EXTRACT(YEAR FROM CURRENT_DATE)"
+    }
+  ],
+  "Encountered \" <IDENTIFIER> \"I \"\" at line 1, column 1.\nWas expecting one of:\n    \"alter\" ...\n    \"begin\" ...\n    \"close\" ...\n    \"commit\" ...\n    \"create\" ...\n    \"deallocate\" ...\n    \"declare\" ...\n    \"delete\" ...\n    \"drop\" ...\n    \"execute\" ...\n    \"fetch\" ...\n    \"insert\" ...\n    \"prepare\" ...\n    \"rollback\" ...\n    \"select\" ...\n    \"update\" ...\n    \"values\" ...\n    \"truncate\" ...\n    \"call\" ...\n    \"explain\" ...\n    \"copy\" ...\n    \"lock\" ...\n    \"rename\" ...\n    \"show\" ...\n    \"{\" ...\n    \"(\" ...\n    \"?\" ...\n    <DOLLAR_N> ...\n    ": [
+    {
+      "inboundQuery": "I'll respond with the natural language query corresponding to the PostgreSQL query you provide."
+    }
+  ],
+  "Encountered \" <IDENTIFIER> \"Here \"\" at line 1, column 1.\nWas expecting one of:\n    \"alter\" ...\n    \"begin\" ...\n    \"close\" ...\n    \"commit\" ...\n    \"create\" ...\n    \"deallocate\" ...\n    \"declare\" ...\n    \"delete\" ...\n    \"drop\" ...\n    \"execute\" ...\n    \"fetch\" ...\n    \"insert\" ...\n    \"prepare\" ...\n    \"rollback\" ...\n    \"select\" ...\n    \"update\" ...\n    \"values\" ...\n    \"truncate\" ...\n    \"call\" ...\n    \"explain\" ...\n    \"copy\" ...\n    \"lock\" ...\n    \"rename\" ...\n    \"show\" ...\n    \"{\" ...\n    \"(\" ...\n    \"?\" ...\n    <DOLLAR_N> ...\n    ": [
+    {
+      "inboundQuery": "Here are the PostgreSQL queries to answer the questions:\n\n**Best reporting `Month` with least number of sales and greatest number of units:**\nSELECT `Reporting Month`, MIN(`Sales Amount-Order Retail445-30PrdMvAvg`) AS min_sales, MAX(`Reseller Order Quantity Long`) AS max_units\nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\nGROUP BY `Reporting Month`\nORDER BY min_sales, max_units DESC\nLIMIT 1\n\n**Best reporting `Month` with greatest number of sales and least number of units:**\nSELECT `Reporting Month`, MAX(`Sales Amount-Order Retail445-30PrdMvAvg`) AS max_sales, MIN(`Reseller Order Quantity Long`) AS min_units\nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\nGROUP BY `Reporting Month`\nORDER BY max_sales DESC, min_units\nLIMIT 1\n\n**Ratio of the previous two instructions:**\nWITH \n  best_month_least_sales AS (\n    SELECT `Reporting Month`, MIN(`Sales Amount-Order Retail445-30PrdMvAvg`) AS min_sales, MAX(`Reseller Order Quantity Long`) AS max_units\n    FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\n    GROUP BY `Reporting Month`\n    ORDER BY min_sales, max_units DESC\n    LIMIT 1\n  ),\n  best_month_greatest_sales AS (\n    SELECT `Reporting Month`, MAX(`Sales Amount-Order Retail445-30PrdMvAvg`) AS max_sales, MIN(`Reseller Order Quantity Long`) AS min_units\n    FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\n    GROUP BY `Reporting Month`\n    ORDER BY max_sales DESC, min_units\n    LIMIT 1\n  )\nSELECT \n  (best_month_greatest_sales.max_sales / best_month_least_sales.min_sales) AS sales_ratio,\n  (best_month_least_sales.max_units / best_month_greatest_sales.min_units) AS units_ratio\nFROM \n  best_month_least_sales, best_month_greatest_sales\nNote: The ratio query assumes that the `Reporting Month` values are the same for both best months. If not, the query needs to be adjusted accordingly."
+    }
+  ],
+  "Encountered \" \"select\" \"SELECT \"\" at line 12, column 1.\nWas expecting one of:\n    <EOF> \n    \"fetch\" ...\n    \"for\" ...\n    \"offset\" ...\n    \"limit\" ...\n    ": [
+    {
+      "inboundQuery": "SELECT \n  `Reporting Month`, \n  `Sales Amount-Order Retail445-30PrdMvAvg`, \n  `Reseller Order Quantity Long`\nFROM \n  `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\nORDER BY \n  `Sales Amount-Order Retail445-30PrdMvAvg` ASC, \n  `Reseller Order Quantity Long` DESC\nLIMIT 1\n\nSELECT \n  `Reporting Month`, \n  `Sales Amount-Order Retail445-30PrdMvAvg`, \n  `Reseller Order Quantity Long`\nFROM \n  `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`\nORDER BY \n  `Sales Amount-Order Retail445-30PrdMvAvg` DESC, \n  `Reseller Order Quantity Long` ASC\nLIMIT 1\n\nSELECT \n  ((\n    SELECT \n      `Sales Amount-Order Retail445-30PrdMvAvg` \n    FROM \n      `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \n    ORDER BY \n      `Sales Amount-Order Retail445-30PrdMvAvg` DESC, \n      `Reseller Order Quantity Long` ASC \n    LIMIT 1\n  ) / (\n    SELECT \n      `Sales Amount-Order Retail445-30PrdMvAvg` \n    FROM \n      `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \n    ORDER BY \n      `Sales Amount-Order Retail445-30PrdMvAvg` ASC, \n      `Reseller Order Quantity Long` DESC \n    LIMIT 1\n  )) AS ratio"
+    }
+  ],
+  "Encountered \" \"select\" \"SELECT \"\" at line 5, column 1.\nWas expecting one of:\n    <EOF> \n    \"collate\" ...\n    \"except\" ...\n    \"fetch\" ...\n    \"for\" ...\n    \"having\" ...\n    \"intersect\" ...\n    \"order\" ...\n    \"union\" ...\n    \"window\" ...\n    \"with\" ...\n    \"offset\" ...\n    \"limit\" ...\n    \",\" ...\n    ": [
+    {
+      "inboundQuery": "SELECT `Reporting Month`, MIN(`Sales Amount-Order Retail445-30PrdMvAvg`), MAX(`Reseller Order Quantity Long`) \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nGROUP BY `Reporting Month`\n\nSELECT `Reporting Month`, MAX(`Sales Amount-Order Retail445-30PrdMvAvg`), MIN(`Reseller Order Quantity Long`) \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nGROUP BY `Reporting Month`"
+    }
+  ],
+  "Encountered \" \"select\" \"SELECT \"\" at line 6, column 1.\nWas expecting one of:\n    <EOF> \n    \"asc\" ...\n    \"collate\" ...\n    \"desc\" ...\n    \"fetch\" ...\n    \"for\" ...\n    \"offset\" ...\n    \"limit\" ...\n    \",\" ...\n    ": [
+    {
+      "inboundQuery": "SELECT `Reporting Month`, SUM(`Reseller Sales Amount Local`) AS sales_amount, SUM(`Reseller Order Quantity Long`) AS units \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nGROUP BY `Reporting Month` \nORDER BY sales_amount, units\n\nSELECT `Reporting Month`, SUM(`Reseller Sales Amount Local`) AS sales_amount, SUM(`Reseller Order Quantity Long`) AS units \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nGROUP BY `Reporting Month` \nORDER BY sales_amount DESC, units"
+    }
+  ],
+  "SQL compilation error:\nsyntax error line 2 at position 0 unexpected 'FROM'.": [
+    {
+      "inboundQuery": "SELECT * FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `Reseller Order Quantity Long` > 25000"
+    }
+  ],
+  "Unknown conditional of class [class com.foundationdb.sql.parser.SubqueryNode] and value: [subqueryType: IN\ntype: null\n]": [
+    {
+      "inboundQuery": "SELECT `Reporting Month`, `Month` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `Month` IN (SELECT `Month` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` GROUP BY `Month` HAVING COUNT(*) > 25000)"
+    }
+  ]
+}

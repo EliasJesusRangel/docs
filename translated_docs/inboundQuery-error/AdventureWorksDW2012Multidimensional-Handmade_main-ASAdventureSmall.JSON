@@ -1,0 +1,10 @@
+{
+  "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n": [
+    {
+      "inboundQuery": "SELECT `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = (SELECT `Reporting Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `Reporting Year` DESC LIMIT 1 OFFSET 1) AND `Reporting Quarter` = 1"
+    },
+    {
+      "inboundQuery": "SELECT `Sales Amount-Order Retail445-30PrdMvAvg` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = (SELECT `Reporting Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `Reporting Year` DESC LIMIT 1 OFFSET 1) AND `Reporting Quarter` = 2"
+    }
+  ]
+}
