@@ -1,0 +1,91 @@
+{
+  "SQL compilation error:\nsyntax error line 2 at position 0 unexpected 'FROM'.": [
+    {
+      "userQuestion": "How many times did we sell more than 5000000"
+    }
+  ],
+  "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n": [
+    {
+      "userQuestion": "when did we sell the most units? Most being 180% of the average"
+    },
+    {
+      "userQuestion": "When did the sale of any given month exceed 150% of our average"
+    }
+  ],
+  "Don't understand aggregate function: aggregateName: COUNT(*)\noperator: null\nmethodName: null\ntype: null\n": [
+    {
+      "userQuestion": "Which category sold the most"
+    }
+  ],
+  "": [
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    },
+    {
+      "userQuestion": "Most sales of any month\n"
+    }
+  ]
+}

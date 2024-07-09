@@ -1,0 +1,126 @@
+[
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Average spread of sales across units?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Longest period where we sold more than 12000 units?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How much was net sales?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How long did it take to sell 6000 units from the start?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How much was net sales during a time period in which we sold less than 50,000 units?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units were sold in the even months?",
+    "engineResponse": {
+      "engineResponse": {
+        "query-id": "e4e72015-ddb4-41fd-8b0e-ed5682cb785b",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 1.6939883340000002,
+          "error-message": "Numeric value 'January 2000' is not recognized"
+        }
+      }
+    },
+    "inboundQuery": "SELECT `Month`, `Product ` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE MOD(`Month`, 2) = 0",
+    "cleanedUpSql": "SELECT \"month\", \"product_\" FROM atscaleTable WHERE MOD(\"month\", 2) = 0;"
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Net sales over the time period in which we sold more than 50,000 shares",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units last year?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many months did we sell more than 100,000 shares?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units were sold in the lowest sale years?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units were sold in the odd months?",
+    "engineResponse": {
+      "engineResponse": {
+        "query-id": "02a5077d-31a7-4679-817c-d38d3c2e6f50",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.661530917,
+          "error-message": "Numeric value 'January 2000' is not recognized"
+        }
+      }
+    },
+    "inboundQuery": "SELECT `Month`, `Product ` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE MOD(`Month`, 2) = 1",
+    "cleanedUpSql": "SELECT \"month\", \"product_\" FROM atscaleTable WHERE MOD(\"month\", 2) = 1"
+  }
+]

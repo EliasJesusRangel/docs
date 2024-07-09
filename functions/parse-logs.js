@@ -70,41 +70,48 @@ export const parseLogs = async (logDirectory) => {
         const json = JSON.parse(f);
         const arr = extractValue(
           json,
-          (obj) => obj.engineResponse.metadata["error-message"],
-          (obj) => {
-            const tmp = {
-              modelName: obj.modelName,
-              catalogName: obj.catalogName,
-              userQuestion: obj.userQuestion,
-              inboundQuery: obj.inboundQuery,
-              cleanedUpSql: obj.cleanedUpSql,
-              errorMessage: obj.engineResponse.metadata["error-message"],
-            };
-
-            return tmp;
-          }
+          (obj) =>
+            Object.hasOwn(obj.engineResponse, "metadata")
+              ? obj.engineResponse.metadata["error-message"]
+              : "",
+          (obj) =>
+            Object.hasOwn(obj.engineResponse, "metadata")
+              ? {
+                  modelName: obj.modelName,
+                  catalogName: obj.catalogName,
+                  userQuestion: obj.userQuestion,
+                  inboundQuery: obj.inboundQuery,
+                  cleanedUpSql: obj.cleanedUpSql,
+                  errorMessage: obj.engineResponse.metadata["error-message"],
+                }
+              : {}
         );
         const questionErrorArray = extractValue(
           json,
-          (obj) => obj.engineResponse.metadata["error-message"],
-          (obj) => {
-            const tmp = {
-              userQuestion: obj.userQuestion,
-            };
-
-            return tmp;
-          }
+          (obj) =>
+            Object.hasOwn(obj.engineResponse, "metadata")
+              ? obj.engineResponse.metadata["error-message"]
+              : "",
+          (obj) =>
+            Object.hasOwn(obj, "userQuestion")
+              ? {
+                  userQuestion: obj.userQuestion,
+                }
+              : {}
         );
+
         const questionInboundQueryArray = extractValue(
           json,
-          (obj) => obj.engineResponse.metadata["error-message"],
-          (obj) => {
-            const tmp = {
-              inboundQuery: obj.inboundQuery,
-            };
-
-            return tmp;
-          }
+          (obj) =>
+            Object.hasOwn(obj.engineResponse, "metadata")
+              ? obj.engineResponse.metadata["error-message"]
+              : "",
+          (obj) =>
+            Object.hasOwn(obj, "inboundQuery")
+              ? {
+                  inboundQuery: obj.inboundQuery,
+                }
+              : {}
         );
 
         await fs.promises.writeFile(fullPath, JSON.stringify(arr, null, 2));

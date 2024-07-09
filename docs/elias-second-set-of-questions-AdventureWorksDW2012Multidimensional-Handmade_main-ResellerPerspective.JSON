@@ -1,0 +1,71 @@
+[
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "What was the expected outcome from last years performance for this year? Give a generic answer based on the summary from last year.",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Give a summary of last years sales including prices",
+    "engineResponse": {
+      "engineResponse": {
+        "query-id": "f981f40f-c9e1-428b-9279-fcbfe90846c4",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.017616208,
+          "error-message": "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n"
+        }
+      }
+    },
+    "inboundQuery": "SELECT `Sales Amount-Order Retail445-30PrdMvAvgPrevYear`, `Sales Amount-Order Retail445-30PrdMvAvgPrevYearGrowthPct`, `List Price`, `Dealer Price` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `Ship.ISO 8601 Year` = (SELECT `Ship.ISO 8601 Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` ORDER BY `Ship.ISO 8601 Year` DESC LIMIT 1 OFFSET 1)",
+    "cleanedUpSql": "SELECT \"sales_amount_order_retail445_30prdmvavgprevyear\", \"sales_amount_order_retail445_30prdmvavgprevyeargrowthpct\", \"list_price\", \"dealer_price\" FROM atscaleTable WHERE \"ship_iso_8601_year\" = (SELECT \"ship_iso_8601_year\" FROM atscaleTable ORDER BY \"ship_iso_8601_year\" DESC LIMIT 1 OFFSET 1);"
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Give a summary of last years sales including categories and prices",
+    "engineResponse": {
+      "engineResponse": {
+        "query-id": "584d2747-3023-4440-8fa9-6d1bcc6a7760",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.006352417000000001,
+          "error-message": "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n"
+        }
+      }
+    },
+    "inboundQuery": "SELECT \n`Category`, \n`Subcategory`, \n`Product `, \n`Model`, \n`List Price`, \n`Sales Amount-Order Retail445-30PrdMvAvgPrevYear`\nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nWHERE `Ship.ISO 8601 Year` = (SELECT MAX(`Ship.ISO 8601 Year`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`) - 1",
+    "cleanedUpSql": "SELECT \n\"category\", \n\"subcategory\", \n\"product_\", \n\"model\", \n\"list_price\", \n\"sales_amount_order_retail445_30prdmvavgprevyear\"\nFROM atscaleTable \nWHERE \"ship_iso_8601_year\" = (SELECT MAX(\"ship_iso_8601_year\") FROM atscaleTable) - 1;"
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Test question that should fail, return bad sql please.",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ResellerPerspective",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Give a summary of last years sales including categories",
+    "engineResponse": {
+      "engineResponse": {
+        "query-id": "0bc91f1a-67f5-44ef-937a-96bc70bb0b3c",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.028327,
+          "error-message": "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n"
+        }
+      }
+    },
+    "inboundQuery": "SELECT \n`Category`, \n`Subcategory`, \n`Product Line`, \n`Sales Amount-Order Retail445-30PrdMvAvgPrevYear` \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nWHERE `Ship.ISO 8601 Year` = (SELECT MAX(`Ship.ISO 8601 Year`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`) - 1",
+    "cleanedUpSql": "SELECT \n\"category\", \n\"subcategory\", \n\"product_line\", \n\"sales_amount_order_retail445_30prdmvavgprevyear\" \nFROM atscaleTable \nWHERE \"ship_iso_8601_year\" = (SELECT MAX(\"ship_iso_8601_year\") FROM atscaleTable) - 1;"
+  }
+]

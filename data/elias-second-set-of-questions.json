@@ -1,0 +1,21 @@
+[
+  "Test question that should fail, return bad sql please.",
+  "Which category sold the most?",
+  "How did the first quarter perform of any year?",
+  "What was the month with the highest rate of increase in sales?",
+  "What was the month with the highest rate of increase in units?",
+  "How many units were sold in the months we made more than 1,000,000",
+  "What was the most profitable category?",
+  "How many of each category did we sell?",
+  "What was the highest selling product we had with the lowest cost?",
+  "What was the most cost efficient item?",
+  "Over the previous years, how did our rate of sales increase or decrease?",
+  "What was the expected outcome from last years performance for this year? Give a generic answer based on the summary from last year.",
+  "Give a summary of last years sales.",
+  "Give a summary of last years sales including categories",
+  "Give a summary of last years sales including categories and prices",
+  "Give a summary of last years sales including prices",
+  "How many bike items did we sell?",
+  "What was the most profitable item with the highest cost?",
+  "How did we perform in the first quarter compared to last year?"
+]

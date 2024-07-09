@@ -5,6 +5,42 @@
     },
     {
       "inboundQuery": "SELECT `Sales Amount-Order Retail445-30PrdMvAvg` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = (SELECT `Reporting Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `Reporting Year` DESC LIMIT 1 OFFSET 1) AND `Reporting Quarter` = 2"
+    },
+    {
+      "inboundQuery": "SELECT `Month`, `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Year` >= (SELECT EXTRACT(YEAR FROM CURRENT_DATE) - 3) ORDER BY `Order Quantity Long` DESC LIMIT 1"
+    },
+    {
+      "inboundQuery": "SELECT `Category`, SUM(`sales_amount_local`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Quarter` = (SELECT MAX(`Reporting Quarter`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`) GROUP BY `Category`"
+    },
+    {
+      "inboundQuery": "SELECT `Category`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Quarter` = (SELECT MAX(`Reporting Quarter`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`)"
+    },
+    {
+      "inboundQuery": "SELECT `Customer State-Province`, `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Year` = (SELECT MAX(`Reporting Year`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`)"
+    },
+    {
+      "inboundQuery": "SELECT `Category`, `Unit Price Discount Percent` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Month` = (SELECT MAX(`Reporting Month`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`)"
+    },
+    {
+      "inboundQuery": "SELECT `Order Quantity Long` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Quarter` = (SELECT MAX(`Reporting Quarter`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`)"
+    },
+    {
+      "inboundQuery": "SELECT AVG(`Unit Price Discount Percent`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Ship.Year` = (SELECT MAX(`Ship.Year`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`)"
+    }
+  ],
+  "Encountered \" \"group\" \"GROUP \"\" at line 1, column 218.\nWas expecting one of:\n    \"and\" ...\n    \"collate\" ...\n    \"is\" ...\n    \"or\" ...\n    ": [
+    {
+      "inboundQuery": "SELECT `Reporting Month`, SUM(`Order Quantity Long`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Month` >= date_trunc('`Month`', current_date) - interval '12 `Month`' GROUP BY `Reporting Month` ORDER BY `Reporting Month`"
+    }
+  ],
+  "Unknown column [sales_amount_local]": [
+    {
+      "inboundQuery": "SELECT `Product `, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Product ` IN ('bikes', 'clothing')"
+    }
+  ],
+  "SQL compilation error:\nsyntax error line 2 at position 0 unexpected 'FROM'.": [
+    {
+      "inboundQuery": "SELECT * FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Sales Amount-Order Retail445-30PrdMvAvg` > 40000"
     }
   ]
 }

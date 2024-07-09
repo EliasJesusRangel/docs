@@ -1,16 +1,14 @@
 import { existsSync, mkdir, readFileSync, writeFile } from "node:fs";
 
-const filePath = "/Users/<user>/Documents/docs";
+const filePath = "/Users/eliasrangel/Documents/docs";
 
-const logToFile = async (
+export const logToFile = async (
   modelName: string,
   catalogName: string,
   userQuestion: string,
   engineResponse: any,
-  inboundQuery: string,
-  cleanedUpSql: string
+  prefix?: string
 ) => {
-  console.log("TRYING TO START LOGGING");
   if (!existsSync(`${filePath}/docs`)) {
     console.log("MAKING DIR");
     await mkdir(
@@ -22,11 +20,15 @@ const logToFile = async (
     );
   }
 
-  const currentLogPath = `${filePath}/docs/${catalogName}-${modelName}.JSON`;
+  const currentLogPath = `${filePath}/docs/${
+    prefix ? `${prefix}-` : ""
+  }${catalogName}-${modelName}.JSON`;
   console.log("LOGGING TO ", currentLogPath);
   try {
     const content: string = readFileSync(currentLogPath).toString();
     const json: unknown = JSON.parse(content);
+    const { inboundQuery, cleanedUpSql, ...rest } = engineResponse;
+
     (
       json as {
         modelName: string;
@@ -40,50 +42,38 @@ const logToFile = async (
       modelName,
       catalogName,
       userQuestion,
-      engineResponse,
+      engineResponse: rest,
       inboundQuery,
       cleanedUpSql,
     });
 
     await writeFile(
       currentLogPath,
-      JSON.stringify(json),
+      JSON.stringify(json, null, 2),
       { flag: "w" },
-      (err) => {
-        console.log(err);
-      }
+      () => {}
     );
   } catch (err) {
     try {
       const json: any[] = [];
-      json.push({
+      const { inboundQuery, cleanedUpSql, ...rest } = engineResponse;
+      const tmp = {
         modelName,
         catalogName,
         userQuestion,
-        engineResponse,
+        engineResponse: engineResponse,
         inboundQuery,
         cleanedUpSql,
-      });
-
+      };
+      json.push(tmp);
       await writeFile(
         currentLogPath,
-        JSON.stringify(json),
-        { flag: "a" },
-        (err) => {
-          console.log(err);
-        }
+        JSON.stringify(json, null, 2),
+        { flag: "w" },
+        (err) => {}
       );
     } catch (err) {
       throw err;
     }
-    console.log(`error logging to file: ${err}`);
-    console.log(
-      modelName,
-      catalogName,
-      userQuestion,
-      engineResponse,
-      inboundQuery,
-      cleanedUpSql
-    );
   }
 };
