@@ -1,27 +1,7 @@
 {
-  "Which category sold the most?": [
+  "What what were the three best selling months?": [
     {
-      "userQuestion": "Which category sold the most?"
-    }
-  ],
-  "What was the month with the highest rate of increase in units?": [
-    {
-      "userQuestion": "What was the month with the highest rate of increase in units?"
-    }
-  ],
-  "Over the previous years, how did our rate of sales increase or decrease?": [
-    {
-      "userQuestion": "Over the previous years, how did our rate of sales increase or decrease?"
-    }
-  ],
-  "What was the month with the highest rate of increase in sales?": [
-    {
-      "userQuestion": "What was the month with the highest rate of increase in sales?"
-    }
-  ],
-  "What was the most cost efficient item?": [
-    {
-      "userQuestion": "What was the most cost efficient item?"
+      "userQuestion": "What what were the three best selling months?"
     }
   ],
   "How many bike items did we sell?": [
@@ -29,29 +9,44 @@
       "userQuestion": "How many bike items did we sell?"
     }
   ],
-  "Average rate of sale for each unit category?": [
+  "Cost of units overall?": [
     {
-      "userQuestion": "Average rate of sale for each unit category?"
+      "userQuestion": "Cost of units overall?"
     }
   ],
-  "What was the most profitable item with the highest cost?": [
+  "Give a summary of last years sales including categories and prices": [
     {
-      "userQuestion": "What was the most profitable item with the highest cost?"
+      "userQuestion": "Give a summary of last years sales including categories and prices"
     }
   ],
-  "How did the first quarter perform of any year?": [
+  "How many sales?": [
     {
-      "userQuestion": "How did the first quarter perform of any year?"
+      "userQuestion": "How many sales?"
     }
   ],
-  "What what were the three best selling months?": [
+  "Give a summary of last years sales including prices": [
     {
-      "userQuestion": "What what were the three best selling months?"
+      "userQuestion": "Give a summary of last years sales including prices"
     }
   ],
-  "How many units were sold in the months we made more than 1,000,000": [
+  "How much was net sales during a time period in which we sold less than 50,000 units?": [
     {
-      "userQuestion": "How many units were sold in the months we made more than 1,000,000"
+      "userQuestion": "How much was net sales during a time period in which we sold less than 50,000 units?"
+    }
+  ],
+  "What was the month with the highest rate of increase in sales?": [
+    {
+      "userQuestion": "What was the month with the highest rate of increase in sales?"
+    }
+  ],
+  "What was the highest selling product we had with the lowest cost?": [
+    {
+      "userQuestion": "What was the highest selling product we had with the lowest cost?"
+    }
+  ],
+  "Over the previous years, how did our rate of sales increase or decrease?": [
+    {
+      "userQuestion": "Over the previous years, how did our rate of sales increase or decrease?"
     }
   ],
   "Give a summary of last years sales.": [
@@ -59,19 +54,44 @@
       "userQuestion": "Give a summary of last years sales."
     }
   ],
-  "Cost of unit over the sale price for months where unit sales were greater than 10,000?": [
+  "How many units were sold in the months we made more than 1,000,000": [
     {
-      "userQuestion": "Cost of unit over the sale price for months where unit sales were greater than 10,000?"
+      "userQuestion": "How many units were sold in the months we made more than 1,000,000"
     }
   ],
-  "Cost of units overall?": [
+  "Cost of unit over the sale price for months where unit sales were greater than 1,000,000?": [
     {
-      "userQuestion": "Cost of units overall?"
+      "userQuestion": "Cost of unit over the sale price for months where unit sales were greater than 1,000,000?"
+    }
+  ],
+  "Give a summary of last years sales including categories": [
+    {
+      "userQuestion": "Give a summary of last years sales including categories"
+    }
+  ],
+  "How did we perform in the first quarter compared to last year?": [
+    {
+      "userQuestion": "How did we perform in the first quarter compared to last year?"
+    }
+  ],
+  "How many units were sold in the odd months?": [
+    {
+      "userQuestion": "How many units were sold in the odd months?"
+    }
+  ],
+  "First quarter unit sale sum": [
+    {
+      "userQuestion": "First quarter unit sale sum"
     }
   ],
   "Price of each item given units sold and sale figures?": [
     {
       "userQuestion": "Price of each item given units sold and sale figures?"
+    }
+  ],
+  "How many units were sold in the even months?": [
+    {
+      "userQuestion": "How many units were sold in the even months?"
     }
   ]
 }

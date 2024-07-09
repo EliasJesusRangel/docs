@@ -11,29 +11,77 @@
   {
     "modelName": "ASAdventureSmall",
     "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-    "userQuestion": "Test question that should fail, return bad sql please.",
+    "userQuestion": "What was the most profitable category?",
     "engineResponse": {
-      "statusCode": 400,
-      "message": "I'm not sure how to answer this question"
-    }
+      "query-id": "cf59f994-5da2-41c5-aa59-7f9b707636af",
+      "metadata": {
+        "succeeded": false,
+        "wall-time": 0.118734667,
+        "error-message": "Unknown column [sales_amount_local]"
+      }
+    },
+    "inboundQuery": "SELECT `Category`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC LIMIT 1",
+    "cleanedUpSql": "SELECT \"category\", \"sales_amount_local\" FROM atscaleTable ORDER BY \"sales_amount_local\" DESC LIMIT 1;"
   },
   {
     "modelName": "ASAdventureSmall",
     "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-    "userQuestion": "What was the most profitable category?",
+    "userQuestion": "How many of each category did we sell?",
     "engineResponse": {
-      "statusCode": 502,
-      "message": "An unknown error was found."
-    }
+      "query-id": "834ccaaa-c4c1-43a1-a45d-f5704d8aa577",
+      "metadata": {
+        "succeeded": false,
+        "wall-time": 0.050615458,
+        "error-message": "Don't understand aggregate function: aggregateName: COUNT(*)\noperator: null\nmethodName: null\ntype: null\n"
+      }
+    },
+    "inboundQuery": "SELECT `Category`, `Subcategory`, `Product Line`, COUNT(*) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` GROUP BY `Category`, `Subcategory`, `Product Line`",
+    "cleanedUpSql": "SELECT \"category\", \"subcategory\", \"product_line\", COUNT(*) FROM atscaleTable GROUP BY \"category\", \"subcategory\", \"product_line\""
   },
   {
     "modelName": "ASAdventureSmall",
     "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
     "userQuestion": "Give a summary of last years sales including categories and prices",
     "engineResponse": {
-      "statusCode": 502,
-      "message": "An unknown error was found."
-    }
+      "query-id": "b20d61e1-26ca-49fb-ab18-f354df387de5",
+      "metadata": {
+        "succeeded": false,
+        "wall-time": 0.012370709,
+        "error-message": "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n"
+      }
+    },
+    "inboundQuery": "SELECT \n    `Category`, \n    `Subcategory`, \n    `Product Line`, \n    `Model`, \n    `List Price`, \n    `sales_amount_local` \nFROM \n    `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` \nWHERE \n    `Ship.Year` = (SELECT MAX(`Ship.Year`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`) - 1",
+    "cleanedUpSql": "SELECT \n    \"category\", \n    \"subcategory\", \n    \"product_line\", \n    \"model\", \n    \"list_price\", \n    \"sales_amount_local\" \nFROM \n    atscaleTable \nWHERE \n    \"ship_year\" = (SELECT MAX(\"ship_year\") FROM atscaleTable) - 1;"
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Give a summary of last years sales including prices",
+    "engineResponse": {
+      "query-id": "0cd2075e-9063-494a-8d3f-996a46f30d9e",
+      "metadata": {
+        "succeeded": false,
+        "wall-time": 0.11101100000000001,
+        "error-message": "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n"
+      }
+    },
+    "inboundQuery": "SELECT `Sales Amount-Order Retail445-30PrdMvAvgPrevYear`, `Unit Price Discount Percent` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Ship.Reporting Year` = (SELECT MAX(`Ship.Reporting Year`) - 1 FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`)",
+    "cleanedUpSql": "SELECT \"sales_amount_order_retail445_30prdmvavgprevyear\", \"unit_price_discount_percent\" FROM atscaleTable WHERE \"ship_reporting_year\" = (SELECT MAX(\"ship_reporting_year\") - 1 FROM atscaleTable);"
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "What was the highest selling product we had with the lowest cost?",
+    "engineResponse": {
+      "query-id": "a8f7760d-8e57-4fce-a0e7-0389a1545070",
+      "metadata": {
+        "succeeded": false,
+        "wall-time": 0.023271,
+        "error-message": "Unknown column [sales_amount_local]"
+      }
+    },
+    "inboundQuery": "SELECT `Product `, `List Price`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC, `List Price` ASC LIMIT 1",
+    "cleanedUpSql": "SELECT \"product_\", \"list_price\", \"sales_amount_local\" FROM atscaleTable ORDER BY \"sales_amount_local\" DESC, \"list_price\" ASC LIMIT 1;"
   },
   {
     "modelName": "ASAdventureSmall",
@@ -47,46 +95,31 @@
   {
     "modelName": "ASAdventureSmall",
     "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-    "userQuestion": "What was the highest selling product we had with the lowest cost?",
-    "engineResponse": {
-      "statusCode": 502,
-      "message": "An unknown error was found."
-    }
-  },
-  {
-    "modelName": "ASAdventureSmall",
-    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-    "userQuestion": "How many of each category did we sell?",
-    "engineResponse": {
-      "statusCode": 502,
-      "message": "An unknown error was found."
-    }
-  },
-  {
-    "modelName": "ASAdventureSmall",
-    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
     "userQuestion": "Give a summary of last years sales including categories",
     "engineResponse": {
-      "statusCode": 502,
-      "message": "An unknown error was found."
-    }
+      "query-id": "6de94d74-f26c-4459-a9f4-c68431c4f3ec",
+      "metadata": {
+        "succeeded": false,
+        "wall-time": 0.00903025,
+        "error-message": "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n"
+      }
+    },
+    "inboundQuery": "SELECT \n    `Category`, \n    `Subcategory`, \n    `Product Line`, \n    `Sales Amount-Order Retail445-30PrdMvAvgPrevYear` \nFROM \n    `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` \nWHERE \n    `Year` = (SELECT MAX(`Year`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`) - 1",
+    "cleanedUpSql": "SELECT \n    \"category\", \n    \"subcategory\", \n    \"product_line\", \n    \"sales_amount_order_retail445_30prdmvavgprevyear\" \nFROM \n    atscaleTable \nWHERE \n    \"year\" = (SELECT MAX(\"year\") FROM atscaleTable) - 1;"
   },
   {
     "modelName": "ASAdventureSmall",
     "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
     "userQuestion": "How did we perform in the first quarter compared to last year?",
     "engineResponse": {
-      "statusCode": 502,
-      "message": "An unknown error was found."
-    }
-  },
-  {
-    "modelName": "ASAdventureSmall",
-    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-    "userQuestion": "Give a summary of last years sales including prices",
-    "engineResponse": {
-      "statusCode": 502,
-      "message": "An unknown error was found."
-    }
+      "query-id": "db03a0ff-fe0d-4f32-b5d4-217eb980972c",
+      "metadata": {
+        "succeeded": false,
+        "wall-time": 0.0064856670000000005,
+        "error-message": "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n"
+      }
+    },
+    "inboundQuery": "SELECT `Reporting Quarter`, `Year`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Reporting Quarter` = 1 AND `Year` = (SELECT `Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `Year` DESC LIMIT 1) AND `Year` - 1 = (SELECT `Year` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `Year` DESC LIMIT 1, 1)",
+    "cleanedUpSql": "SELECT \"reporting_quarter\", \"year\", \"sales_amount_local\" FROM atscaleTable WHERE \"reporting_quarter\" = 1 AND \"year\" = (SELECT \"year\" FROM atscaleTable ORDER BY \"year\" DESC LIMIT 1) AND \"year\" - 1 = (SELECT \"year\" FROM atscaleTable ORDER BY \"year\" DESC LIMIT 1, 1);"
   }
 ]

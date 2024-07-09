@@ -3,34 +3,7 @@
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Longest period where we sold more than 12000 units?",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "I'm not sure how to answer this question"
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "How many months did we sell more than 100,000 shares?",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "I'm not sure how to answer this question"
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Average spread of sales across units?",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "I'm not sure how to answer this question"
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many units last year?",
       "engineResponse": {
         "statusCode": 400,
         "message": "I'm not sure how to answer this question"
@@ -48,6 +21,15 @@
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+      "userQuestion": "How many units?",
+      "engineResponse": {
+        "statusCode": 400,
+        "message": "I'm not sure how to answer this question"
+      }
+    },
+    {
+      "modelName": "ASAdventureSmall",
+      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "How many units were sold in the lowest sale years?",
       "engineResponse": {
         "statusCode": 400,
@@ -57,16 +39,7 @@
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Net sales over the time period in which we sold more than 50,000 shares",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "I'm not sure how to answer this question"
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Longest period where we sold more than 12000 units?",
+      "userQuestion": "How many units last year?",
       "engineResponse": {
         "statusCode": 400,
         "message": "I'm not sure how to answer this question"
@@ -84,87 +57,173 @@
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many units?",
+      "userQuestion": "Average spread of sales across units?",
+      "engineResponse": {
+        "statusCode": 400,
+        "message": "I'm not sure how to answer this question"
+      }
+    },
+    {
+      "modelName": "ASAdventureSmall",
+      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+      "userQuestion": "Longest period where we sold more than 12000 units?",
+      "engineResponse": {
+        "statusCode": 400,
+        "message": "I'm not sure how to answer this question"
+      }
+    },
+    {
+      "modelName": "ASAdventureSmall",
+      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+      "userQuestion": "Net sales over the time period in which we sold more than 50,000 shares",
       "engineResponse": {
         "statusCode": 400,
         "message": "I'm not sure how to answer this question"
       }
     }
   ],
-  "An unknown error was found.": [
+  "Average rate of sale for each unit category?": [
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many sales?",
+      "userQuestion": "Average rate of sale for each unit category?",
       "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many units were sold in the odd months?",
-      "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
+        "query-id": "80bee84b-92c4-4aa4-bba8-d09289bbe99c",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.269916084,
+          "error-message": "Unknown column [sales_amount_local]"
+        }
+      },
+      "inboundQuery": "SELECT `Category`, `Product Line`, `Unit Price Discount Percent`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`",
+      "cleanedUpSql": "SELECT \"category\", \"product_line\", \"unit_price_discount_percent\", \"sales_amount_local\" FROM atscaleTable",
+      "errorMessage": "Unknown column [sales_amount_local]"
+    }
+  ],
+  "Highest selling unit?": [
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "Highest selling unit?",
       "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
+        "query-id": "221bb506-5c92-4613-b223-5a41f33c108e",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.043010958,
+          "error-message": "Unknown column [sales_amount_local]"
+        }
+      },
+      "inboundQuery": "SELECT `Product `, `Unit Price Discount Percent`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC LIMIT 1",
+      "cleanedUpSql": "SELECT \"product_\", \"unit_price_discount_percent\", \"sales_amount_local\" FROM atscaleTable ORDER BY \"sales_amount_local\" DESC LIMIT 1;",
+      "errorMessage": "Unknown column [sales_amount_local]"
+    }
+  ],
+  "Best selling category?": [
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "Best selling category?",
       "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
+        "query-id": "e45c616e-a1b8-45dd-9eb4-23f82adeba9d",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.0175605,
+          "error-message": "Unknown column [sales_amount_local]"
+        }
+      },
+      "inboundQuery": "SELECT `Category`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC LIMIT 1",
+      "cleanedUpSql": "SELECT \"category\", \"sales_amount_local\" FROM atscaleTable ORDER BY \"sales_amount_local\" DESC LIMIT 1;",
+      "errorMessage": "Unknown column [sales_amount_local]"
+    }
+  ],
+  "How many sales?": [
+    {
+      "modelName": "ASAdventureSmall",
+      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+      "userQuestion": "How many sales?",
+      "engineResponse": {
+        "query-id": "1b7c57b8-d0d0-4e62-9c5c-81cf1babea79",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.141549958,
+          "error-message": "Unknown column [sales_amount_local]"
+        }
+      },
+      "inboundQuery": "SELECT `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`",
+      "cleanedUpSql": "SELECT \"sales_amount_local\" FROM atscaleTable",
+      "errorMessage": "Unknown column [sales_amount_local]"
+    }
+  ],
+  "How much was net sales during a time period in which we sold less than 50,000 units?": [
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "How much was net sales during a time period in which we sold less than 50,000 units?",
       "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
+        "query-id": "7438e046-7e55-4155-9080-9e5051073046",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 0.023383875000000002,
+          "error-message": "Unknown column [sales_amount_local]"
+        }
+      },
+      "inboundQuery": "SELECT `Order Quantity Long`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Order Quantity Long` < 50000",
+      "cleanedUpSql": "SELECT \"order_quantity_long\", \"sales_amount_local\" FROM atscaleTable WHERE \"order_quantity_long\" < 50000",
+      "errorMessage": "Unknown column [sales_amount_local]"
+    }
+  ],
+  "How many units were sold in the odd months?": [
+    {
+      "modelName": "ASAdventureSmall",
+      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+      "userQuestion": "How many units were sold in the odd months?",
+      "engineResponse": {
+        "query-id": "85844727-5296-47e9-8fbd-6570f672fe1e",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 7.778705962,
+          "error-message": "Numeric value 'January 2000' is not recognized"
+        }
+      },
+      "inboundQuery": "SELECT `Order Quantity Long`, `Month` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE MOD(`Month`, 2) = 1",
+      "cleanedUpSql": "SELECT \"order_quantity_long\", \"month\" FROM atscaleTable WHERE MOD(\"month\", 2) = 1",
+      "errorMessage": "Numeric value 'January 2000' is not recognized"
+    }
+  ],
+  "First quarter unit sale sum": [
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "First quarter unit sale sum",
       "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
+        "query-id": "b96485ab-8e65-440b-aa2d-d9d6f52abbfd",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 8.310329212000001,
+          "error-message": "Numeric value 'Quarter 1, 2000' is not recognized"
+        }
+      },
+      "inboundQuery": "SELECT `Order Quantity Long`, `Quarter` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Quarter` = 1",
+      "cleanedUpSql": "SELECT \"order_quantity_long\", \"quarter\" FROM atscaleTable WHERE \"quarter\" = 1",
+      "errorMessage": "Numeric value 'Quarter 1, 2000' is not recognized"
+    }
+  ],
+  "How many units were sold in the even months?": [
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "How many units were sold in the even months?",
       "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    }
-  ],
-  "No results were returned, please rephrase the filter.": [
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Cost of unit over the sale price for months where unit sales were greater than 1,000,000?",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "No results were returned, please rephrase the filter."
-      }
+        "query-id": "ee171597-2928-4f13-b240-f04a3345444e",
+        "metadata": {
+          "succeeded": false,
+          "wall-time": 6.0617685450000005,
+          "error-message": "Numeric value 'January 2000' is not recognized"
+        }
+      },
+      "inboundQuery": "SELECT `Order Quantity Long`, `Month` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE MOD(`Month`, 2) = 0",
+      "cleanedUpSql": "SELECT \"order_quantity_long\", \"month\" FROM atscaleTable WHERE MOD(\"month\", 2) = 0",
+      "errorMessage": "Numeric value 'January 2000' is not recognized"
     }
   ]
 }

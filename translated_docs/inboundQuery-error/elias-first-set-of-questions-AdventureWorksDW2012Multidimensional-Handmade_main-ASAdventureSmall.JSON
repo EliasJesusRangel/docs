@@ -3,34 +3,7 @@
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Longest period where we sold more than 12000 units?",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "I'm not sure how to answer this question"
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "How many months did we sell more than 100,000 shares?",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "I'm not sure how to answer this question"
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Average spread of sales across units?",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "I'm not sure how to answer this question"
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many units last year?",
       "engineResponse": {
         "statusCode": 400,
         "message": "I'm not sure how to answer this question"
@@ -48,6 +21,15 @@
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+      "userQuestion": "How many units?",
+      "engineResponse": {
+        "statusCode": 400,
+        "message": "I'm not sure how to answer this question"
+      }
+    },
+    {
+      "modelName": "ASAdventureSmall",
+      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
       "userQuestion": "How many units were sold in the lowest sale years?",
       "engineResponse": {
         "statusCode": 400,
@@ -57,16 +39,7 @@
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Net sales over the time period in which we sold more than 50,000 shares",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "I'm not sure how to answer this question"
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Longest period where we sold more than 12000 units?",
+      "userQuestion": "How many units last year?",
       "engineResponse": {
         "statusCode": 400,
         "message": "I'm not sure how to answer this question"
@@ -84,87 +57,69 @@
     {
       "modelName": "ASAdventureSmall",
       "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many units?",
+      "userQuestion": "Average spread of sales across units?",
+      "engineResponse": {
+        "statusCode": 400,
+        "message": "I'm not sure how to answer this question"
+      }
+    },
+    {
+      "modelName": "ASAdventureSmall",
+      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+      "userQuestion": "Longest period where we sold more than 12000 units?",
+      "engineResponse": {
+        "statusCode": 400,
+        "message": "I'm not sure how to answer this question"
+      }
+    },
+    {
+      "modelName": "ASAdventureSmall",
+      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+      "userQuestion": "Net sales over the time period in which we sold more than 50,000 shares",
       "engineResponse": {
         "statusCode": 400,
         "message": "I'm not sure how to answer this question"
       }
     }
   ],
-  "An unknown error was found.": [
+  "Average rate of sale for each unit category?": [
     {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many sales?",
-      "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many units were sold in the odd months?",
-      "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Highest selling unit?",
-      "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Best selling category?",
-      "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How much was net sales during a time period in which we sold less than 50,000 units?",
-      "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "First quarter unit sale sum",
-      "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
-    },
-    {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "How many units were sold in the even months?",
-      "engineResponse": {
-        "statusCode": 502,
-        "message": "An unknown error was found."
-      }
+      "inboundQuery": "SELECT `Category`, `Product Line`, `Unit Price Discount Percent`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`"
     }
   ],
-  "No results were returned, please rephrase the filter.": [
+  "Highest selling unit?": [
     {
-      "modelName": "ASAdventureSmall",
-      "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
-      "userQuestion": "Cost of unit over the sale price for months where unit sales were greater than 1,000,000?",
-      "engineResponse": {
-        "statusCode": 400,
-        "message": "No results were returned, please rephrase the filter."
-      }
+      "inboundQuery": "SELECT `Product `, `Unit Price Discount Percent`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC LIMIT 1"
+    }
+  ],
+  "Best selling category?": [
+    {
+      "inboundQuery": "SELECT `Category`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` ORDER BY `sales_amount_local` DESC LIMIT 1"
+    }
+  ],
+  "How many sales?": [
+    {
+      "inboundQuery": "SELECT `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall`"
+    }
+  ],
+  "How much was net sales during a time period in which we sold less than 50,000 units?": [
+    {
+      "inboundQuery": "SELECT `Order Quantity Long`, `sales_amount_local` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Order Quantity Long` < 50000"
+    }
+  ],
+  "How many units were sold in the odd months?": [
+    {
+      "inboundQuery": "SELECT `Order Quantity Long`, `Month` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE MOD(`Month`, 2) = 1"
+    }
+  ],
+  "First quarter unit sale sum": [
+    {
+      "inboundQuery": "SELECT `Order Quantity Long`, `Quarter` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE `Quarter` = 1"
+    }
+  ],
+  "How many units were sold in the even months?": [
+    {
+      "inboundQuery": "SELECT `Order Quantity Long`, `Month` FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ASAdventureSmall` WHERE MOD(`Month`, 2) = 0"
     }
   ]
 }
