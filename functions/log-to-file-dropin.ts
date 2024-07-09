@@ -1,7 +1,50 @@
 import { existsSync, mkdir, readFileSync, writeFile } from "node:fs";
+import path from "node:path";
 
-const filePath = "/Users/eliasrangel/Documents/docs";
+const baseFilePath = path.join(__dirname, "..", process.env.FILEPATH ?? "");
 
+const checkIfDocFolderExists = async () => {
+  if (!existsSync(`${baseFilePath}/docs`)) {
+    console.log("MAKING DIR");
+    await mkdir(`${baseFilePath}/docs`, { recursive: true, mode: "w" }, () => {
+      console.log("MADE DIRECTORY docs");
+    });
+  }
+};
+const getCurrentLogPath = (
+  catalogName: string,
+  modelName: string,
+  prefix?: string
+) =>
+  `${baseFilePath}/docs/${
+    prefix ? `${prefix}-` : ""
+  }${catalogName}-${modelName}.JSON`;
+const getJsonFromFile = (
+  filepath: string
+): {
+  modelName: string;
+  catalogName: string;
+  userQuestion: string;
+  engineResponse: any;
+  inboundQuery: string;
+  cleanedUpSql: string;
+}[] => {
+  try {
+    const content: string = readFileSync(filepath).toString();
+    const json: unknown = JSON.parse(content);
+
+    return json as {
+      modelName: string;
+      catalogName: string;
+      userQuestion: string;
+      engineResponse: any;
+      inboundQuery: string;
+      cleanedUpSql: string;
+    }[];
+  } catch (err) {
+    return [];
+  }
+};
 export const logToFile = async (
   modelName: string,
   catalogName: string,
@@ -9,75 +52,39 @@ export const logToFile = async (
   engineResponse: any,
   prefix?: string
 ) => {
-  if (!existsSync(`${filePath}/docs`)) {
-    console.log("MAKING DIR");
-    await mkdir(
-      `${filePath}/docs`,
-      { recursive: true, mode: "w" },
-      (err: unknown) => {
-        console.log("ERROR CREATING DIRECTORY");
-      }
-    );
-  }
-
-  const currentLogPath = `${filePath}/docs/${
-    prefix ? `${prefix}-` : ""
-  }${catalogName}-${modelName}.JSON`;
-  console.log("LOGGING TO ", currentLogPath);
+  checkIfDocFolderExists();
+  const currentLogPath = getCurrentLogPath(catalogName, modelName, prefix);
   try {
-    const content: string = readFileSync(currentLogPath).toString();
-    const json: unknown = JSON.parse(content);
-    const { inboundQuery, cleanedUpSql, ...rest } = engineResponse;
+    const json: {
+      modelName: string;
+      catalogName: string;
+      userQuestion: string;
+      engineResponse: any;
+      inboundQuery: string;
+      cleanedUpSql: string;
+    }[] = getJsonFromFile(currentLogPath);
 
-    (
-      json as {
-        modelName: string;
-        catalogName: string;
-        userQuestion: string;
-        engineResponse: any;
-        inboundQuery: string;
-        cleanedUpSql: string;
-      }[]
-    ).push({
+    json.push({
       modelName,
       catalogName,
       userQuestion,
       engineResponse: engineResponse.hasOwnProperty("engineResponse")
         ? engineResponse.engineResponse
         : engineResponse,
-      inboundQuery,
-      cleanedUpSql,
+      inboundQuery: engineResponse.inboundQuery,
+      cleanedUpSql: engineResponse.cleanedUpSql,
     });
 
     await writeFile(
       currentLogPath,
       JSON.stringify(json, null, 2),
       { flag: "w" },
-      () => {}
+      () => {
+        console.log("DONE WRITING TO ", currentLogPath);
+      }
     );
   } catch (err) {
-    try {
-      const json: any[] = [];
-      const { inboundQuery, cleanedUpSql, ...rest } = engineResponse;
-      const tmp = {
-        modelName,
-        catalogName,
-        userQuestion,
-        engineResponse: engineResponse.hasOwnProperty("engineResponse")
-          ? engineResponse.engineResponse
-          : engineResponse,
-        inboundQuery,
-        cleanedUpSql,
-      };
-      json.push(tmp);
-      await writeFile(
-        currentLogPath,
-        JSON.stringify(json, null, 2),
-        { flag: "w" },
-        (err) => {}
-      );
-    } catch (err) {
-      throw err;
-    }
+    console.log(err);
+    throw err;
   }
 };

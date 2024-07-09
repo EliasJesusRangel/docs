@@ -36,12 +36,10 @@ export const callLlm = async (request: Partial<LlmRequestExample>) => {
   });
 
   const responseJson = await response.json();
-  // console.log(responseJson);
   if (
     responseJson.hasOwnProperty("statusCode") &&
     responseJson.statusCode !== 200
   ) {
-    console.log("DEFAULT BAD RESPONSE");
     logToFile(
       body.modelName,
       body.catalogName,
@@ -57,7 +55,6 @@ export const callLlm = async (request: Partial<LlmRequestExample>) => {
     responseJson.engineResponse.hasOwnProperty("metadata") &&
     responseJson.engineResponse.metadata.succeeded === false
   ) {
-    console.log("Suceeded false");
     logToFile(
       body.modelName,
       body.catalogName,
@@ -66,7 +63,6 @@ export const callLlm = async (request: Partial<LlmRequestExample>) => {
       request.prefix
     );
   }
-  console.log("SUCCESSFUL QUERY");
   logToFile(
     body.modelName,
     body.catalogName,
