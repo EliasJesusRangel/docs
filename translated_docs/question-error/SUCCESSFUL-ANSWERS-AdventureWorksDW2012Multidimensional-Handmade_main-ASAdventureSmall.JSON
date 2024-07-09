@@ -1,0 +1,77 @@
+{
+  "Which category sold the most?": [
+    {
+      "userQuestion": "Which category sold the most?"
+    }
+  ],
+  "What was the month with the highest rate of increase in units?": [
+    {
+      "userQuestion": "What was the month with the highest rate of increase in units?"
+    }
+  ],
+  "Over the previous years, how did our rate of sales increase or decrease?": [
+    {
+      "userQuestion": "Over the previous years, how did our rate of sales increase or decrease?"
+    }
+  ],
+  "What was the month with the highest rate of increase in sales?": [
+    {
+      "userQuestion": "What was the month with the highest rate of increase in sales?"
+    }
+  ],
+  "What was the most cost efficient item?": [
+    {
+      "userQuestion": "What was the most cost efficient item?"
+    }
+  ],
+  "How many bike items did we sell?": [
+    {
+      "userQuestion": "How many bike items did we sell?"
+    }
+  ],
+  "Average rate of sale for each unit category?": [
+    {
+      "userQuestion": "Average rate of sale for each unit category?"
+    }
+  ],
+  "What was the most profitable item with the highest cost?": [
+    {
+      "userQuestion": "What was the most profitable item with the highest cost?"
+    }
+  ],
+  "How did the first quarter perform of any year?": [
+    {
+      "userQuestion": "How did the first quarter perform of any year?"
+    }
+  ],
+  "What what were the three best selling months?": [
+    {
+      "userQuestion": "What what were the three best selling months?"
+    }
+  ],
+  "How many units were sold in the months we made more than 1,000,000": [
+    {
+      "userQuestion": "How many units were sold in the months we made more than 1,000,000"
+    }
+  ],
+  "Give a summary of last years sales.": [
+    {
+      "userQuestion": "Give a summary of last years sales."
+    }
+  ],
+  "Cost of unit over the sale price for months where unit sales were greater than 10,000?": [
+    {
+      "userQuestion": "Cost of unit over the sale price for months where unit sales were greater than 10,000?"
+    }
+  ],
+  "Cost of units overall?": [
+    {
+      "userQuestion": "Cost of units overall?"
+    }
+  ],
+  "Price of each item given units sold and sale figures?": [
+    {
+      "userQuestion": "Price of each item given units sold and sale figures?"
+    }
+  ]
+}

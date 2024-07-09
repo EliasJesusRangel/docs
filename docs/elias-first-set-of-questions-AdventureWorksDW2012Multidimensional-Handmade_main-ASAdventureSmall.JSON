@@ -1,0 +1,164 @@
+[
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Longest period where we sold more than 12000 units?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many sales?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many months did we sell more than 100,000 shares?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units were sold in the odd months?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Average spread of sales across units?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units last year?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How much was net sales?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Highest selling unit?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Best selling category?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units were sold in the lowest sale years?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Net sales over the time period in which we sold more than 50,000 shares",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Longest period where we sold more than 12000 units?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How long did it take to sell 6000 units from the start?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Cost of unit over the sale price for months where unit sales were greater than 1,000,000?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "No results were returned, please rephrase the filter."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How much was net sales during a time period in which we sold less than 50,000 units?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units?",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "First quarter unit sale sum",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many units were sold in the even months?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  }
+]

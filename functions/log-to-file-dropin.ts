@@ -42,7 +42,9 @@ export const logToFile = async (
       modelName,
       catalogName,
       userQuestion,
-      engineResponse: rest,
+      engineResponse: engineResponse.hasOwnProperty("engineResponse")
+        ? engineResponse.engineResponse
+        : engineResponse,
       inboundQuery,
       cleanedUpSql,
     });
@@ -61,7 +63,9 @@ export const logToFile = async (
         modelName,
         catalogName,
         userQuestion,
-        engineResponse: engineResponse,
+        engineResponse: engineResponse.hasOwnProperty("engineResponse")
+          ? engineResponse.engineResponse
+          : engineResponse,
         inboundQuery,
         cleanedUpSql,
       };

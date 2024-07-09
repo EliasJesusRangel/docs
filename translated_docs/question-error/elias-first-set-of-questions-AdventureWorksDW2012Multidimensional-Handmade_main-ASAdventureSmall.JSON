@@ -1,0 +1,62 @@
+{
+  "I'm not sure how to answer this question": [
+    {
+      "userQuestion": "Longest period where we sold more than 12000 units?"
+    },
+    {
+      "userQuestion": "How many months did we sell more than 100,000 shares?"
+    },
+    {
+      "userQuestion": "Average spread of sales across units?"
+    },
+    {
+      "userQuestion": "How many units last year?"
+    },
+    {
+      "userQuestion": "How much was net sales?"
+    },
+    {
+      "userQuestion": "How many units were sold in the lowest sale years?"
+    },
+    {
+      "userQuestion": "Net sales over the time period in which we sold more than 50,000 shares"
+    },
+    {
+      "userQuestion": "Longest period where we sold more than 12000 units?"
+    },
+    {
+      "userQuestion": "How long did it take to sell 6000 units from the start?"
+    },
+    {
+      "userQuestion": "How many units?"
+    }
+  ],
+  "An unknown error was found.": [
+    {
+      "userQuestion": "How many sales?"
+    },
+    {
+      "userQuestion": "How many units were sold in the odd months?"
+    },
+    {
+      "userQuestion": "Highest selling unit?"
+    },
+    {
+      "userQuestion": "Best selling category?"
+    },
+    {
+      "userQuestion": "How much was net sales during a time period in which we sold less than 50,000 units?"
+    },
+    {
+      "userQuestion": "First quarter unit sale sum"
+    },
+    {
+      "userQuestion": "How many units were sold in the even months?"
+    }
+  ],
+  "No results were returned, please rephrase the filter.": [
+    {
+      "userQuestion": "Cost of unit over the sale price for months where unit sales were greater than 1,000,000?"
+    }
+  ]
+}

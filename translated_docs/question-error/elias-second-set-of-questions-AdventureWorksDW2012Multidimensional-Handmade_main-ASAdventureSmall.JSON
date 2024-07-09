@@ -1,0 +1,36 @@
+{
+  "I'm not sure how to answer this question": [
+    {
+      "userQuestion": "Test question that should fail, return bad sql please."
+    },
+    {
+      "userQuestion": "Test question that should fail, return bad sql please."
+    },
+    {
+      "userQuestion": "What was the expected outcome from last years performance for this year? Give a generic answer based on the summary from last year."
+    }
+  ],
+  "An unknown error was found.": [
+    {
+      "userQuestion": "What was the most profitable category?"
+    },
+    {
+      "userQuestion": "Give a summary of last years sales including categories and prices"
+    },
+    {
+      "userQuestion": "What was the highest selling product we had with the lowest cost?"
+    },
+    {
+      "userQuestion": "How many of each category did we sell?"
+    },
+    {
+      "userQuestion": "Give a summary of last years sales including categories"
+    },
+    {
+      "userQuestion": "How did we perform in the first quarter compared to last year?"
+    },
+    {
+      "userQuestion": "Give a summary of last years sales including prices"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Test question that should fail, return bad sql please.",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Test question that should fail, return bad sql please.",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "What was the most profitable category?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Give a summary of last years sales including categories and prices",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "What was the expected outcome from last years performance for this year? Give a generic answer based on the summary from last year.",
+    "engineResponse": {
+      "statusCode": 400,
+      "message": "I'm not sure how to answer this question"
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "What was the highest selling product we had with the lowest cost?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How many of each category did we sell?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Give a summary of last years sales including categories",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "How did we perform in the first quarter compared to last year?",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  },
+  {
+    "modelName": "ASAdventureSmall",
+    "catalogName": "AdventureWorksDW2012Multidimensional-Handmade_main",
+    "userQuestion": "Give a summary of last years sales including prices",
+    "engineResponse": {
+      "statusCode": 502,
+      "message": "An unknown error was found."
+    }
+  }
+]

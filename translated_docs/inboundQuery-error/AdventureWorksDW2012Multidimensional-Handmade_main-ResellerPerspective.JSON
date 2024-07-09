@@ -1,23 +1,25 @@
 {
-  "SQL compilation error:\nsyntax error line 2 at position 0 unexpected 'FROM'.": [
+  "How many times did we sell more than 5000000": [
     {
       "inboundQuery": "SELECT * FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` WHERE `Sales Amount-Order Retail445-30PrdMvAvg` > 5000000"
     }
   ],
-  "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n": [
+  "when did we sell the most units? Most being 180% of the average": [
     {
       "inboundQuery": "SELECT `ISO 8601 Year`, `ISO 8601 Week`, `ISO 8601 Day`, `Reseller Order Quantity Long` \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nWHERE `Reseller Order Quantity Long` > (SELECT AVG(`Reseller Order Quantity Long`) * 1.8 FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`)"
-    },
+    }
+  ],
+  "When did the sale of any given month exceed 150% of our average": [
     {
       "inboundQuery": "SELECT `Reporting Month`, `Sales Amount-Order Retail445-30PrdMvAvg` \nFROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` \nWHERE `Sales Amount-Order Retail445-30PrdMvAvg` > (SELECT AVG(`Sales Amount-Order Retail445-30PrdMvAvg`) FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective`) * 1.5"
     }
   ],
-  "Don't understand aggregate function: aggregateName: COUNT(*)\noperator: null\nmethodName: null\ntype: null\n": [
+  "Which category sold the most": [
     {
       "inboundQuery": "SELECT `Category`, COUNT(*) AS count FROM `AdventureWorksDW2012Multidimensional-Handmade_main`.`ResellerPerspective` GROUP BY `Category` ORDER BY count DESC LIMIT 1"
     }
   ],
-  "": [
+  "Most sales of any month\n": [
     {
       "inboundQuery": ""
     },

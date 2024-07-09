@@ -52,6 +52,7 @@ export const callLlm = async (request: Partial<LlmRequestExample>) => {
   }
 
   if (
+    responseJson.hasOwnProperty("engineResponse") &&
     responseJson.engineResponse.hasOwnProperty("metadata") &&
     !responseJson.engineResponse.metadata.succeeded
   ) {

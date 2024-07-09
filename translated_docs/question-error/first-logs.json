@@ -1,179 +1,233 @@
 {
-  "Numeric value 'Calendar 2000' is not recognized": [
+  "How many sales this year\n": [
     {
       "userQuestion": "How many sales this year\n"
-    },
-    {
-      "userQuestion": "What was the net value of sales since the beginning of the year?\n"
-    },
-    {
-      "userQuestion": "What was the net value of sales since the beginning of the year?\n"
-    },
-    {
-      "userQuestion": "How many sales this year?"
-    },
-    {
-      "userQuestion": "What is the quantity of units sold in the dataset\n\nWith the year 2023 in it"
-    },
-    {
-      "userQuestion": "How many sales in 2006"
-    },
-    {
-      "userQuestion": "What was the best month with the year 2005 attached"
     }
   ],
-  "Don't understand constraint value: subqueryType: EXPRESSION\ntype: null\n of type class com.foundationdb.sql.parser.SubqueryNode also subqueryType: EXPRESSION\ntype: null\n": [
+  "How many much was ordered from last year to now\n": [
     {
       "userQuestion": "How many much was ordered from last year to now\n"
-    },
-    {
-      "userQuestion": "How many sales last year"
-    },
-    {
-      "userQuestion": "How many units were sold between January and February in 2023 of any unit that is noticeable beyond the mean"
-    },
-    {
-      "userQuestion": "What was the biggest increase in units last year "
-    },
-    {
-      "userQuestion": "How many units sold last year before quarter 34"
-    },
-    {
-      "userQuestion": "How many units sold last year before quarter 3"
-    },
-    {
-      "userQuestion": "How many sales last year?\n"
     }
   ],
-  "SQL compilation error: error line 9 at position 6\ninvalid identifier '\"datecustom_t20\".\"reporting_year_name\"'": [
+  "What was the net value of sales since the beginning of the year?\n": [
+    {
+      "userQuestion": "What was the net value of sales since the beginning of the year?\n"
+    },
+    {
+      "userQuestion": "What was the net value of sales since the beginning of the year?\n"
+    }
+  ],
+  "How many sales this year?": [
     {
       "userQuestion": "How many sales this year?"
     },
+    {
+      "userQuestion": "How many sales this year?"
+    }
+  ],
+  "How many sale last year?": [
     {
       "userQuestion": "How many sale last year?"
     }
   ],
-  "Unknown column [sale_calendar_year]": [
+  "How many sales last year?": [
     {
       "userQuestion": "How many sales last year?"
-    },
+    }
+  ],
+  "How many sales last year": [
+    {
+      "userQuestion": "How many sales last year"
+    }
+  ],
+  "What was the time frame that sold the most units of any item?": [
     {
       "userQuestion": "What was the time frame that sold the most units of any item?"
     }
   ],
-  "Unknown column [order_custom_year]": [
+  "How many units were sold between January and February in 2023 of any unit that is noticeable beyond the mean": [
+    {
+      "userQuestion": "How many units were sold between January and February in 2023 of any unit that is noticeable beyond the mean"
+    }
+  ],
+  "What was the biggest increase in units last year ": [
+    {
+      "userQuestion": "What was the biggest increase in units last year "
+    }
+  ],
+  "What was the last time period that over 1000000 units were distributed": [
     {
       "userQuestion": "What was the last time period that over 1000000 units were distributed"
     }
   ],
-  "Unknown column [order_custom_quarter]": [
+  "How many units sold in the first 25% of the year": [
     {
       "userQuestion": "How many units sold in the first 25% of the year"
     }
   ],
-  "Numeric value 'Reporting Calendar 2000' is not recognized": [
+  "How many units sold last year before quarter 34": [
+    {
+      "userQuestion": "How many units sold last year before quarter 34"
+    }
+  ],
+  "How many units sold last year before quarter 3": [
+    {
+      "userQuestion": "How many units sold last year before quarter 3"
+    }
+  ],
+  "How many sales last year.": [
     {
       "userQuestion": "How many sales last year."
-    },
-    {
-      "userQuestion": "How many sales in the first quarter of the 2023 year"
-    },
-    {
-      "userQuestion": "Give me the quantity of sales made in the first quarter of the year 2023 in the dataset"
-    },
-    {
-      "userQuestion": "Give me the quantity of sales made in the first quarter of the year 2024 in the dataset\n"
-    },
-    {
-      "userQuestion": "Give me the quantity of sales made in the first quarter of the year 1999 in the dataset\n"
-    },
-    {
-      "userQuestion": "Give me a summary expansion of Reporting June, 2005"
-    },
-    {
-      "userQuestion": "Give me the details of \"Reporting June, 2005\""
-    },
-    {
-      "userQuestion": "Give me the details of Reporting June, 2005"
-    },
-    {
-      "userQuestion": "What was the best month with the year 2005 attached\n"
     }
   ],
-  "Unknown column [sales_amount_local]": [
+  "How many sales last year?\n": [
+    {
+      "userQuestion": "How many sales last year?\n"
+    }
+  ],
+  "How many sales in the dataset overall?": [
     {
       "userQuestion": "How many sales in the dataset overall?"
-    },
-    {
-      "userQuestion": "Quantify the total sales in the dataset"
-    },
-    {
-      "userQuestion": "Quantify the amount of sales in the dataset"
-    },
-    {
-      "userQuestion": "What is the highest earning month"
-    },
-    {
-      "userQuestion": "What were the best sale months"
     }
   ],
-  "Don't understand function: to_char": [
+  "How many sales in the first quarter of the 2023 year": [
+    {
+      "userQuestion": "How many sales in the first quarter of the 2023 year"
+    }
+  ],
+  "Quantify the total sales in the dataset": [
+    {
+      "userQuestion": "Quantify the total sales in the dataset"
+    }
+  ],
+  "Quantify the amount of sales in the dataset": [
+    {
+      "userQuestion": "Quantify the amount of sales in the dataset"
+    }
+  ],
+  "Give me the quantity of sales made in the first quarter of the year 2023 in the dataset": [
+    {
+      "userQuestion": "Give me the quantity of sales made in the first quarter of the year 2023 in the dataset"
+    }
+  ],
+  "Give me the quantity of sales made in the first quarter of the year 2024 in the dataset\n": [
+    {
+      "userQuestion": "Give me the quantity of sales made in the first quarter of the year 2024 in the dataset\n"
+    }
+  ],
+  "Give me the quantity of sales made in the first quarter of the year 1999 in the dataset\n": [
+    {
+      "userQuestion": "Give me the quantity of sales made in the first quarter of the year 1999 in the dataset\n"
+    }
+  ],
+  "What is the total of sales made as a float in scientific notation in the whole dataset": [
     {
       "userQuestion": "What is the total of sales made as a float in scientific notation in the whole dataset"
     }
   ],
-  "Don't understand aggregate function: aggregateName: COUNT(*)\noperator: null\nmethodName: null\ntype: null\n": [
+  "What is the highest earning month": [
+    {
+      "userQuestion": "What is the highest earning month"
+    }
+  ],
+  "What is the quantity of units sold in the dataset\n\nWith the year 2023 in it": [
+    {
+      "userQuestion": "What is the quantity of units sold in the dataset\n\nWith the year 2023 in it"
+    }
+  ],
+  "How many sales in 2006": [
+    {
+      "userQuestion": "How many sales in 2006"
+    }
+  ],
+  "how many sales in months that end in ber": [
     {
       "userQuestion": "how many sales in months that end in ber"
-    },
+    }
+  ],
+  "What were the best sale months": [
+    {
+      "userQuestion": "What were the best sale months"
+    }
+  ],
+  "Give me a summary expansion of Reporting June, 2005": [
+    {
+      "userQuestion": "Give me a summary expansion of Reporting June, 2005"
+    }
+  ],
+  "Give me the details of \"Reporting June, 2005\"": [
+    {
+      "userQuestion": "Give me the details of \"Reporting June, 2005\""
+    }
+  ],
+  "Give me the details of Reporting June, 2005": [
+    {
+      "userQuestion": "Give me the details of Reporting June, 2005"
+    }
+  ],
+  "What was the best month with the year 2005 attached": [
+    {
+      "userQuestion": "What was the best month with the year 2005 attached"
+    }
+  ],
+  "Most sales in 2005": [
+    {
+      "userQuestion": "Most sales in 2005"
+    }
+  ],
+  "What was the best month with the year 2005 attached\n": [
+    {
+      "userQuestion": "What was the best month with the year 2005 attached\n"
+    }
+  ],
+  "Give me one month from \"ISO8601 Calendar 2007\" that has the highest reporting units": [
     {
       "userQuestion": "Give me one month from \"ISO8601 Calendar 2007\" that has the highest reporting units"
     }
   ],
-  "Numeric value 'ISO8601 Calendar 2000' is not recognized": [
-    {
-      "userQuestion": "Most sales in 2005"
-    },
-    {
-      "userQuestion": "How many sales this year"
-    },
-    {
-      "userQuestion": "How many sales this year, i.e. the total value within \"ISO8601 Calendar 2000\n\"\n"
-    }
-  ],
-  "Encountered \" <IDENTIFIER> \"I \"\" at line 1, column 1.\nWas expecting one of:\n    \"alter\" ...\n    \"begin\" ...\n    \"close\" ...\n    \"commit\" ...\n    \"create\" ...\n    \"deallocate\" ...\n    \"declare\" ...\n    \"delete\" ...\n    \"drop\" ...\n    \"execute\" ...\n    \"fetch\" ...\n    \"insert\" ...\n    \"prepare\" ...\n    \"rollback\" ...\n    \"select\" ...\n    \"update\" ...\n    \"values\" ...\n    \"truncate\" ...\n    \"call\" ...\n    \"explain\" ...\n    \"copy\" ...\n    \"lock\" ...\n    \"rename\" ...\n    \"show\" ...\n    \"{\" ...\n    \"(\" ...\n    \"?\" ...\n    <DOLLAR_N> ...\n    ": [
+  "Now give me the opposite of the previous instruction": [
     {
       "userQuestion": "Now give me the opposite of the previous instruction"
     }
   ],
-  "Encountered \" <IDENTIFIER> \"Here \"\" at line 1, column 1.\nWas expecting one of:\n    \"alter\" ...\n    \"begin\" ...\n    \"close\" ...\n    \"commit\" ...\n    \"create\" ...\n    \"deallocate\" ...\n    \"declare\" ...\n    \"delete\" ...\n    \"drop\" ...\n    \"execute\" ...\n    \"fetch\" ...\n    \"insert\" ...\n    \"prepare\" ...\n    \"rollback\" ...\n    \"select\" ...\n    \"update\" ...\n    \"values\" ...\n    \"truncate\" ...\n    \"call\" ...\n    \"explain\" ...\n    \"copy\" ...\n    \"lock\" ...\n    \"rename\" ...\n    \"show\" ...\n    \"{\" ...\n    \"(\" ...\n    \"?\" ...\n    <DOLLAR_N> ...\n    ": [
+  "Give me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\nGive me the ratio of the previous two instructions\n": [
     {
       "userQuestion": "Give me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\nGive me the ratio of the previous two instructions\n"
     }
   ],
-  "Encountered \" \"select\" \"SELECT \"\" at line 12, column 1.\nWas expecting one of:\n    <EOF> \n    \"fetch\" ...\n    \"for\" ...\n    \"offset\" ...\n    \"limit\" ...\n    ": [
+  "compare the quantities gathered from the following two questions:\n\nGive me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\nGive me the ratio of the previous two instructions\n": [
     {
       "userQuestion": "compare the quantities gathered from the following two questions:\n\nGive me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\nGive me the ratio of the previous two instructions\n"
     }
   ],
-  "Encountered \" \"select\" \"SELECT \"\" at line 5, column 1.\nWas expecting one of:\n    <EOF> \n    \"collate\" ...\n    \"except\" ...\n    \"fetch\" ...\n    \"for\" ...\n    \"having\" ...\n    \"intersect\" ...\n    \"order\" ...\n    \"union\" ...\n    \"window\" ...\n    \"with\" ...\n    \"offset\" ...\n    \"limit\" ...\n    \",\" ...\n    ": [
+  "compare the quantities gathered from the following two questions:\n\nGive me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\n": [
     {
       "userQuestion": "compare the quantities gathered from the following two questions:\n\nGive me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\n"
     }
   ],
-  "Encountered \" \"select\" \"SELECT \"\" at line 6, column 1.\nWas expecting one of:\n    <EOF> \n    \"asc\" ...\n    \"collate\" ...\n    \"desc\" ...\n    \"fetch\" ...\n    \"for\" ...\n    \"offset\" ...\n    \"limit\" ...\n    \",\" ...\n    ": [
+  "Give me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\n": [
     {
       "userQuestion": "Give me the best reporting month. I.e. the one with the least number of sales and greatest number of units\n\nGive me the best reporting month. I.e. the one with the greatest number of sales and least number of units\n\n"
     }
   ],
-  "SQL compilation error:\nsyntax error line 2 at position 0 unexpected 'FROM'.": [
+  "How often did we sell more than 25000 units?": [
     {
       "userQuestion": "How often did we sell more than 25000 units?"
     }
   ],
-  "Unknown conditional of class [class com.foundationdb.sql.parser.SubqueryNode] and value: [subqueryType: IN\ntype: null\n]": [
+  "Which months sold more than 25000 units?": [
     {
       "userQuestion": "Which months sold more than 25000 units?"
+    }
+  ],
+  "How many sales this year": [
+    {
+      "userQuestion": "How many sales this year"
+    }
+  ],
+  "How many sales this year, i.e. the total value within \"ISO8601 Calendar 2000\n\"\n": [
+    {
+      "userQuestion": "How many sales this year, i.e. the total value within \"ISO8601 Calendar 2000\n\"\n"
     }
   ]
 }

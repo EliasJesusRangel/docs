@@ -2,10 +2,9 @@
   {
     "question": "How does the distribution of units sold vary over the unit categories?",
     "result": "Produced the incorrect result"
-  }
+  },
   {
     "question": "How much did units sold change in each category",
     "result": "Produced the incorrect result"
   }
-  
 ]
